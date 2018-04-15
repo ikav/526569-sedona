@@ -35,7 +35,74 @@
     </header>
 
     <main class="page-main">
+      <section class="comment">
+        <h2 class="comment__title">Оставьте свой отзыв</h2>
+        <p class="comment__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <form class="form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="introduce-yourself__fieldset">
+            <legend class="introduce-yourself__legend">Представьтесь:</legend>
+            <label for="introduce-yourself__first-name">Имя*:</label>
+            <input class="introduce-yourself__first-name" type="text" placeholder="Петр" id="introduce-yourself__first-name">
+            <label for="introduce-yourself__last-name">Фамилия*:</label>
+            <input class="introduce-yourself__last-name" type="text" placeholder="Иванов" id="introduce-yourself__last-name">
+            <label for="introduce-yourself__middle-name">Отчество:</label>
+            <input class="introduce-yourself__middle-name" type="text" placeholder="Александрович" id="introduce-yourself__middle-name">
+          </fieldset>
+          <fieldset class="contact-info__fieldset">
+            <legend class="contact-info__legend">Контактная информация:</legend>
+            <label for="contact-info__tel">Контактный телефон*:</label>
+            <input class="contact-info__tel" type="text" placeholder="Введите телефон" id="contact-info__tel">
+            <label for="contact-info__email">Электронная почта*:</label>
+            <input class="contact-info__email" type="text" placeholder="Введите e-mail" id="contact-info__email">
+          </fieldset>
+          <fieldset class="impression__fieldset">
+            <legend class="impression__legend">Ваше общее впечатление:</legend>
+            <ul class="impression__list">
+              <li class="impression__item">
+                <input class="visually-hidden impression__positive" name="impression" type="radio" id="impression__positive" value="impression__positive" checked>
+                <label for="impression__positive">Скорее положительное</label>
+              </li>
+              <li class="impression__item">
+                <input class="visually-hidden impression__negative" name="impression" type="radio" id="impression__negative" value="impression__negative">
+                <label for="impression__negative">Скорее отрицательное</label>
+              </li>
+              <li class="impression__item">
+                <input class="visually-hidden impression__difficult-to-answer" name="impression" type="radio" id="impression__difficult-to-answer" value="impression__difficult-to-answer">
+                <label for="impression__difficult-to-answer">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="visited-sights__fieldset">
+            <legend class="visited-sights__legend">Посещенные достопримечательности:</legend>
+            <ul class="visited-sights__list">
+              <li class="visited-sights__item">
+                <input class="visually-hidden visited-sights__bridge" name="visited-sights" type="checkbox" id="visited-sights__bridge-devil" value="visited-sights__bridge-devil" checked>
+                <label for="visited-sights__bridge-devil">Мост Дьявола</label>
+              </li>
+              <li class="visited-sights__item">
+                <input class="visually-hidden visited-sights__mountain-bell" name="visited-sights" type="checkbox" id="visited-sights__mountain-bell" value="visited-sights__mountain-bell" checked>
+                <label for="visited-sights__mountain-bell">Гора-Колокол</label>
+              </li>
+              <li class="visited-sights__item">
+                <input class="visually-hidden visited-sights__slide-park" name="visited-sights" type="checkbox" id="visited-sights__slide-park" value="visited-sights__slide-park" checked>
+                <label for="visited-sights__slide-park">Слайд-Парк</label>
+              </li>
+              <li class="visited-sights__item">
+                <input class="visually-hidden visited-sights__red-rocks" name="visited-sights" type="checkbox" id="visited-sights__red-rocks" value="visited-sights__red-rocks">
+                <label for="visited-sights__red-rocks">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
 
+          <div class="emotions">
+            <label for="emotions__description">Опишите свои эмоции:</label>
+            <textarea class="emotions__description" name="emotions__description" id="emotions__description" cols="30" rows="10">Опишете подробно все свои восторги</textarea>
+          </div>
+
+          <button class="form_comment button" type="submit">Отправить отзыв</button>
+        
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
