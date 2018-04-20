@@ -1,0 +1,121 @@
+/* Преимущества */
+.advantages {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages__better-grand-canyoun {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  margin: 0;
+  padding: 0;
+  background-color: @background-add;
+}
+
+.advantages__title {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.advantages__number {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.advantages__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+}
+
+/* ToDo: Оптимизировать! */
+.advantages__item--first,
+.advantages__item--second {
+  background-color: @background-main;
+}
+
+/* ToDo: Оптимизировать! */
+.advantages__item--first .advantages__title,
+.advantages__item--first .advantages__number,
+.advantages__item--first .advantages__description,
+.advantages__item--second .advantages__title,
+.advantages__item--second .advantages__number,
+.advantages__item--second .advantages__description {
+  color: #ffffff;
+}
+
+/* Отступы между строчек. Для первого и второго преимущества разные */
+.advantages__item--first .advantages__title {
+  padding-top: 60px;
+}
+
+.advantages__item--first .advantages__number {
+  padding-top: 14px;
+  padding-bottom: 18px;
+}
+
+.advantages__item--first .advantages__description {
+  padding-bottom: 42px;
+}
+
+.advantages__item--second .advantages__title {
+  padding-top: 43px;
+}
+
+.advantages__item--second .advantages__number {
+  padding-top: 14px;
+  padding-bottom: 18px;
+}
+
+.advantages__item--second .advantages__description {
+  padding-bottom: 42px;
+}
+
+/* Отступы между строчек. У остальных преимуществ отступы одинаковые */
+.advantages__title {
+  padding-top: 32px;
+}
+
+.advantages__number {
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.advantages__description {
+  padding-bottom: 30px;
+}
+
+.advantages__city {
+  width: 320px;
+  height: 260px;
+  background-image: url("../img/main-city-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.advantages__bridge {
+  width: 280px;
+  height: 280px;
+  background-image: url("../img/photo-bridge-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
