@@ -1,13 +1,16 @@
-.site-list {
+.site-list,
+.site-list__item,
+.site-list__link {
   margin: 0;
   padding: 0;
+}
+
+.site-list {
   background-color: @background-main;
   list-style: none;
 }
 
 .site-list__item {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   border-bottom: 1px solid #678fa8;
   border-top: 1px solid #9ac2db;
@@ -17,13 +20,11 @@
 
 .site-list__link {
   display: block;
-  margin: 0;
-  padding: 0;
   padding-top: 17px;
   padding-bottom: 17px;
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: @text-color-link;
   text-transform: uppercase;
   text-decoration: none;
 }

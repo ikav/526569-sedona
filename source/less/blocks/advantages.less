@@ -1,68 +1,69 @@
-/* Преимущества */
+/* Преимущества городка Седона */
 .advantages {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
 
-.advantages__better-grand-canyoun {
+.advantages__list,
+.advantages__item,
+.advantages__better-grand-canyoun,
+.advantages__title,
+.advantages__number,
+.advantages__description {
   padding: 0;
   margin: 0;
+}
+
+
+.advantages__better-grand-canyoun {
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 26px;
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
 .advantages__item {
-  margin: 0;
-  padding: 0;
   background-color: @background-add;
 }
 
 .advantages__title {
-  margin: 0;
-  padding: 0;
+  padding-top: 32px;
   font-size: 18px;
   line-height: 26px;
-  color: #000000;
+  color: @text-color-title;
 }
 
 .advantages__number {
-  margin: 0;
-  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 20px;
   font-size: 14px;
   line-height: 21px;
-  color: #333333;
+  color: @text-color-description;
 }
 
 .advantages__description {
-  margin: 0;
-  padding: 0;
+  padding-bottom: 30px;
   font-size: 14px;
   line-height: 21px;
-  color: #333333;
+  color: @text-color-description;
 }
 
-/* ToDo: Оптимизировать! */
 .advantages__item--first,
 .advantages__item--second {
   background-color: @background-main;
 }
 
-/* ToDo: Оптимизировать! */
 .advantages__item--first .advantages__title,
 .advantages__item--first .advantages__number,
 .advantages__item--first .advantages__description,
 .advantages__item--second .advantages__title,
 .advantages__item--second .advantages__number,
 .advantages__item--second .advantages__description {
-  color: #ffffff;
+  color: @text-color-link;
 }
 
 /* Отступы между строчек. Для первого и второго преимущества разные */
@@ -90,20 +91,6 @@
 
 .advantages__item--second .advantages__description {
   padding-bottom: 42px;
-}
-
-/* Отступы между строчек. У остальных преимуществ отступы одинаковые */
-.advantages__title {
-  padding-top: 32px;
-}
-
-.advantages__number {
-  padding-top: 16px;
-  padding-bottom: 20px;
-}
-
-.advantages__description {
-  padding-bottom: 30px;
 }
 
 .advantages__city {

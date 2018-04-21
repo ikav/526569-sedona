@@ -1,12 +1,22 @@
 .page-header {
-  background-color: @background;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: @background-page;
+}
+
+.page-header__img,
+.page-header__img--index,
+.page-header__img-text--index,
+.page-header__img--inner,
+.page-header__img-text--inner {
+  padding: 0;
+  margin: 0;
 }
 
 .page-header__img {
-  padding: 0;
-  margin: 0;
   margin-top: -28px;
-  background-color: #c0ddf0;
+  background-color: @background-img;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
@@ -21,7 +31,7 @@
 
 .page-header__img-text--index {
   margin-top: 90px;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 /* Внутренние страницы */
@@ -34,5 +44,5 @@
 
 .page-header__img-text--inner {
   margin-top: 52px;
-  margin-left: 45px;
+  margin-left: 0;
 }
