@@ -1,5 +1,14 @@
 .main-nav {
   position: relative;
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
 }
 
 .main-nav__toggle {
@@ -11,4 +20,20 @@
 .main-nav__logo {
   display: block;
   text-align: center;
+}
+
+.main-nav__wrapper {
+
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: @tablet-width;
+    margin: 0 auto;
+
+    background: rgba(255, 45, 82, 0.2);
+    box-shadow: 0 0 0 3px rgb(255, 45, 82);
+  }
 }

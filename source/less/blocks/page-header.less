@@ -1,8 +1,18 @@
 .page-header {
-  font-family: "PT Sans", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* font-family: "PT Sans", Arial, sans-serif; */
   text-transform: uppercase;
   text-align: center;
   background-color: @background-page;
+
+  min-height: 668px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 576px;
+  }
 }
 
 .page-header__img,
