@@ -1,0 +1,38 @@
+/* Наши рекомендации */
+.recommendations {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.recommendations__list,
+.recommendations__item,
+.recommendations__title,
+.recommendations__description {
+  .indents-zero();
+}
+
+.recommendations__list {
+  list-style: none;
+}
+
+.recommendations__item {
+  background-color: @background-page;
+}
+
+.recommendations__title {
+  padding-top: 40px;
+  padding-bottom: 22px;
+  font-size: 18px;
+  line-height: 26px;
+  color: @text-color-title;
+}
+
+.recommendations__description {
+  font-size: 14px;
+  line-height: 21px;
+  color: @text-color-description;
+}
+
+.recommendations__description:last-child {
+  padding-bottom: 40px;
+}

@@ -1,0 +1,47 @@
+.page-header {
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: @background-page;
+}
+
+.page-header__img,
+.page-header__img--index,
+.page-header__img-text--index,
+.page-header__img--inner,
+.page-header__img-text--inner {
+  .indents-zero();
+}
+
+.page-header__img {
+  margin-top: -28px;
+  background-color: @background-img;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+/* Первая страница. Картинка выше, надпись другая */
+.page-header__img--index {
+  width: 320px;
+  height: 389px;
+  background-position-x: -224px;
+  background-position-y: 0;
+}
+
+.page-header__img-text--index {
+  margin-top: 90px;
+  margin-left: 0;
+}
+
+/* Внутренние страницы */
+.page-header__img--inner {
+  width: 320px;
+  height: 158px;
+  background-position-x: -224px;
+  background-position-y: -230px;
+}
+
+.page-header__img-text--inner {
+  margin-top: 52px;
+  margin-left: 0;
+}
