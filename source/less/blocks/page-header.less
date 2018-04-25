@@ -1,17 +1,20 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: column;
-  /* font-family: "PT Sans", Arial, sans-serif; */
+
+  width: @mobile-width;
+  margin: 0 auto;
+
   text-transform: uppercase;
   text-align: center;
   background-color: @background-page;
-
-  min-height: 668px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    min-height: 576px;
+    width: @tablet-width;
+    margin: 0 auto;
   }
 }
 
@@ -36,6 +39,14 @@
   height: 389px;
   background-position-x: -224px;
   background-position-y: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__img--index {
+  width: 768px;
+  background-position-x: 0;
+  background-position-y: 0;
+}
 }
 
 .page-header__img-text--index {

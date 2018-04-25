@@ -1,8 +1,17 @@
 .page-main {
-  font-family: "PT Sans", Arial, sans-serif;
+  width: @mobile-width;
+  margin: 0 auto;
+
   text-transform: uppercase;
   text-align: center;
   background-color: @background-page;
+}
+
+@media(min-width: @tablet-width) {
+  .page-main {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
 }
 
 .page-main__title {
