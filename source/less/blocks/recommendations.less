@@ -13,28 +13,34 @@
 
 .recommendations__list {
   list-style: none;
+  background-color: @background-page;
+}
+
+.recommendations__item {
+    min-height: 138px;
 }
 
 @media(min-width: @tablet-width) {
   .recommendations__list {
     display: flex;
+    background-color: @background-page;
+  }
+
+  .recommendations__item {
     min-height: 330px; //временно. Для черновой верстки
-    align-items: center;//временно. Для черновой верстки
   }
 }
 
 @media(min-width: @desktop-width) {
   .recommendations__list {
     display: flex;
+    background-color: @background-page;
+  }
+
+  .recommendations__item {
     min-height: 330px; //временно. Для черновой верстки
-    align-items: center;//временно. Для черновой верстки
   }
 }
-
-.recommendations__item {
-  background-color: @background-page;
-}
-
 .recommendations__title {
   padding-top: 40px;
   padding-bottom: 22px;

@@ -22,10 +22,6 @@
   .page-header {
     width: @desktop-width;
     margin: 0 auto;
-
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: @background-page-desktop;
   }
 }
 
@@ -84,4 +80,22 @@
 .page-header__img-text--inner {
   margin-top: 52px;
   margin-left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__img--inner {
+    width: @tablet-width;
+    height: 290px;
+    background-position-x: -224px;
+    background-position-y: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__img--inner {
+    width: @desktop-width;
+    height: 302px;
+    background-position-x: 0;
+    background-position-y: 0;
+  }
 }

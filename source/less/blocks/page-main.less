@@ -7,9 +7,18 @@
   background-color: @background-page;
 }
 
+.page-main--photo {
+  width: @mobile-width - 40px;
+}
+
 @media(min-width: @tablet-width) {
   .page-main {
     width: @tablet-width;
+    margin: 0 auto;
+  }
+
+  .page-main--photo {
+    width: @tablet-width - 120px;
     margin: 0 auto;
   }
 }
@@ -18,16 +27,12 @@
   .page-main {
     width: @desktop-width;
     margin: 0 auto;
-
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: @background-page-desktop;
   }
 }
 .page-main__title {
   .indents-zero();
-  margin-top: 44px;
-  margin-bottom: 37px;
+  padding-top: 44px;
+  padding-bottom: 37px;
 
   font-size: 18px;
   line-height: 26px;
