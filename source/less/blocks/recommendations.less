@@ -20,6 +20,24 @@
     min-height: 138px;
 }
 
+.recommendations__title {
+  padding-top: 40px;
+  padding-bottom: 22px;
+  font-size: 18px;
+  line-height: 26px;
+  color: @text-color-title;
+}
+
+.recommendations__description {
+  font-size: 14px;
+  line-height: 21px;
+  color: @text-color-description;
+}
+
+.recommendations__description:last-child {
+  padding-bottom: 40px;
+}
+
 @media(min-width: @tablet-width) {
   .recommendations__list {
     display: flex;
@@ -40,21 +58,4 @@
   .recommendations__item {
     min-height: 330px; //временно. Для черновой верстки
   }
-}
-.recommendations__title {
-  padding-top: 40px;
-  padding-bottom: 22px;
-  font-size: 18px;
-  line-height: 26px;
-  color: @text-color-title;
-}
-
-.recommendations__description {
-  font-size: 14px;
-  line-height: 21px;
-  color: @text-color-description;
-}
-
-.recommendations__description:last-child {
-  padding-bottom: 40px;
 }

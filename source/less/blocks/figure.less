@@ -1,7 +1,8 @@
 .figure,
 .figure__img,
 .figure__author,
-.figure__capture
+.figure__capture,
+.figure__title,
 .figure__like-link,
 .figure__likes-number {
   .indents-zero();
@@ -16,7 +17,7 @@
   margin-bottom: 20px;
 }
 
-.figure__capture {
+.figure__title {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 24px;
@@ -36,7 +37,7 @@
   line-height: 24px;
 }
 
-.figure__about {
+.figure__capture {
   text-align: left;
 }
 
@@ -58,7 +59,7 @@
     height: 400px;
   }
 
-  .figure__about {
+  .figure__capture {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,13 +86,13 @@
     height: 400px;
   }
 
-  .figure__about {
+  .figure__capture {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
     background-color: transparent;
-    margin-top: -60px;
+    margin-top: -75px;
     color: @text-color-link;
   }
 
