@@ -110,12 +110,16 @@
   .advantages__city {
     width: 512px;
     background-image: url("../img/main-city-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
+    background-size: cover;
+    background-position: center 0;
   }
 
   .advantages__bridge {
     width: 512px;
     background-image: url("../img/main-bridge-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
     order: -1;
+    background-size: cover;
+    background-position: center 0;
   }
 
   .advantages__item--first,
@@ -141,17 +145,5 @@
     width: 900px;
     background-image: url("../img/main-bridge-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
     order: -1;
-  }
-
-  .advantages__item--first,
-  .advantages__item--second {
-    display: flex;
-    align-items: center;
-  }
-
-  .advantages__list--third {
-    display: flex;
-    justify-content: space-between;
-    min-height: 256px; //временно, для черновой верстки
   }
 }

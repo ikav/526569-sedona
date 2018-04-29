@@ -31,21 +31,19 @@
     width: @tablet-width;
     margin: 0 auto;
   }
+
+  /* Скроем кнопку открыть/закрыть главное меню */
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav {
-    width: auto;
-    margin: 0;
-  }
-
   .main-nav__logo {
-    position: absolute;
     left: 550px;
   }
 
   .main-nav__wrapper {
     width: @desktop-width;
-    margin: 0 auto;
   }
 }
