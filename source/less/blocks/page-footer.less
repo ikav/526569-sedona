@@ -1,6 +1,45 @@
 .page-footer {
-  font-family: "PT Sans", Arial, sans-serif;
+  width: @mobile-width;
+  margin: 0 auto;
+
   text-transform: uppercase;
   text-align: center;
   background-color: @background-page;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: @tablet-width;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .page-footer--photo {
+    /* Страница фотогалереи имеет отступы по 60px */
+    width: @tablet-width - 120px;
+  }
+
+  .page-footer__wrapper--photo {
+    /* Страница фотогалереи надписи прижаты к краям */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }

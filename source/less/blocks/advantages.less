@@ -13,7 +13,6 @@
   .indents-zero();
 }
 
-
 .advantages__better-grand-canyoun {
   margin-bottom: 30px;
   font-size: 14px;
@@ -22,10 +21,6 @@
 
 .advantages__list {
   list-style: none;
-}
-
-.advantages__item {
-  background-color: @background-add;
 }
 
 .advantages__title {
@@ -53,6 +48,10 @@
 .advantages__item--first,
 .advantages__item--second {
   background-color: @background-main;
+}
+
+.advantages__list--third {
+  background-color: @background-add;
 }
 
 /* За каскадом, чтобы не зависело от расположения кода */
@@ -101,8 +100,58 @@
 }
 
 .advantages__bridge {
-  width: 280px;
-  height: 280px;
-  background-image: url("../img/photo-bridge-mobile@1x.jpg");
+  width: 320px;
+  height: 260px;
+  background-image: url("../img/main-bridge-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__city {
+    width: 512px;
+    background-image: url("../img/main-city-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
+  }
+
+  .advantages__bridge {
+    width: 512px;
+    background-image: url("../img/main-bridge-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
+    order: -1;
+  }
+
+  .advantages__item--first,
+  .advantages__item--second {
+    display: flex;
+    align-items: center;
+  }
+
+  .advantages__list--third {
+    display: flex;
+    justify-content: space-between;
+    min-height: 256px; //временно, для черновой верстки
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__city {
+    width: 900px;
+    background-image: url("../img/main-city-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
+  }
+
+  .advantages__bridge {
+    width: 900px;
+    background-image: url("../img/main-bridge-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
+    order: -1;
+  }
+
+  .advantages__item--first,
+  .advantages__item--second {
+    display: flex;
+    align-items: center;
+  }
+
+  .advantages__list--third {
+    display: flex;
+    justify-content: space-between;
+    min-height: 256px; //временно, для черновой верстки
+  }
 }

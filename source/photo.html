@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Фотогалерея. Седона</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
         <!-- Для JS -->
-        <button class="main-nav__toggle button" type="button">Открыть/закрыть меню</button>
+        <button class="main-nav__toggle button" type="button">X</button>
         <div class="main-nav__wrapper">
           <!-- Главное меню -->
           <ul class="main-nav__list site-list">
@@ -27,18 +28,21 @@
             </li>
           </ul>
         </div>
-        <!-- Это элемент меню навигации. По щелчку переходим на главную страницу -->
-        <a class="main-nav__logo" href="index.html">
-          <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="103" height="84" alt="Прекрасный город Седона">
-        </a>
+
       </nav>
+      <!-- По щелчку переходим на главную страницу -->
+      <a class="main-nav__logo" href="index.html">
+        <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="103" height="84" alt="Логотипа города Седона">
+      </a>
       <div class="page-header__img page-header__img--inner">
         <img class="page-header__img-text page-header__img-text--inner" src="img/text-sedona.svg" width="229" height="40" alt="Добро пожаловать в Седону!">
       </div>
     </header>
 
-    <main class="page-main">
-      <h1 class="page-main__title">Фото и видео</h1>
+    <main class="page-main page-main--inner">
+
+      <h1 class="page-main__title page-main__title--inner">Фото и видео</h1>
+
       <section class="photogalary">
         <h2 class="visually-hidden photogalary__title">Фотогалерея</h2>
         <p class="photogalary__description">Не можете решиться на путешествие из-за курса? Фотографии помогут забыть вам о политике и экономике.</p>
@@ -46,37 +50,61 @@
           <li class="photogalary__item">
             <figure class="figure">
               <img class="figure__img figure__img--foreign" src="/img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
-              <figcaption class="figure__capture">Неродные просторы</figcaption>
-              <p class="figure__author">Автор фото: Борис</p>
-              <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
-              <b class="figure__likes-number">1350</b>
+              <figcaption class="figure__capture">
+                <div>
+                  <p class="figure__title">Неродные просторы</p>
+                  <p class="figure__author">Автор фото: Борис</p>
+                </div>
+                <div>
+                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
+                  <b class="figure__likes-number">1350</b>
+                </div>
+              </figcaption>
             </figure>
           </li>
           <li class="photogalary__item">
             <figure class="figure">
               <img class="figure__img" src="/img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
-              <figcaption class="figure__capture">Местная растительность</figcaption>
-              <p class="figure__author">Автор фото: Сергей</p>
-              <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
-              <b class="figure__likes-number">143</b>
+              <figcaption class="figure__capture">
+                <div>
+                  <p class="figure__title">Местная растительность</p>
+                  <p class="figure__author">Автор фото: Сергей</p>
+                </div>
+                <div>
+                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
+                  <b class="figure__likes-number">143</b>
+                </div>
+              </figcaption>
             </figure>
           </li>
           <li class="photogalary__item">
             <figure class="figure">
               <img class="figure__img" src="/img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
-              <figcaption class="figure__capture">Дорога на север</figcaption>
-              <p class="figure__author">Автор фото: Петр</p>
-              <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
-              <b class="figure__likes-number">96</b>
+              <figcaption class="figure__capture">
+                <div>
+                  <p class="figure__title">Дорога на север</p>
+                  <p class="figure__author">Автор фото: Петр</p>
+                </div>
+                <div>
+                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
+                  <b class="figure__likes-number">96</b>
+                </div>
+              </figcaption>
             </figure>
           </li>
           <li class="photogalary__item">
             <figure class="figure">
               <img class="figure__img" src="/img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
-              <figcaption class="figure__capture">Мост дьявола</figcaption>
-              <p class="figure__author">Автор фото: Антон</p>
-              <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
-              <b class="figure__likes-number">254</b>
+              <figcaption class="figure__capture">
+                <div>
+                  <p class="figure__title">Мост дьявола</p>
+                  <p class="figure__author">Автор фото: Антон</p>
+                </div>
+                <div>
+                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
+                  <b class="figure__likes-number">254</b>
+                </div>
+              </figcaption>
             </figure>
           </li>
         </ul>
@@ -89,8 +117,8 @@
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
+    <footer class="page-footer page-footer--photo">
+      <div class="page-footer__wrapper page-footer__wrapper--photo">
         <!-- Хэштег -->
         <div class="page-footer__hashtag hashtag">
           <a class="hashtag__link" href="#">#visitsedona</a>

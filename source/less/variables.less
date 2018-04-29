@@ -4,10 +4,10 @@
   #eeeeee - вспомогательный цвет
   #c0ddf0 - фоновый цвет под надпись "Sedona"
 */
-@background-page: #ffffff;
-@background-main: #81b3d2;
-@background-add: #eeeeee;
-@background-img: #c0ddf0;
+@background-page:         #ffffff;
+@background-main:         #81b3d2;
+@background-add:          #eeeeee;
+@background-img:          #c0ddf0;
 
 /* Цвета текста
   #ffffff - цвет ссылок
@@ -19,22 +19,11 @@
 @text-color-description: #333333;
 
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src:
-      local("PT Sans"),
-      url("../fonts/ptsans.woff2") format("woff2"),
-      url("../fonts/ptsans.woff") format("woff");
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src:
-      local("PT Sans Bold"),
-      url("../fonts/ptsansbold.woff2") format("woff2"),
-      url("../fonts/ptsansbold.woff") format("woff");
-}
+/* Ширина экрана для разных версий
+  320px  - мобильная версия
+  768px  - планшетная версия
+  1200px - десктопная версия
+*/
+@mobile-width: 320px;
+@tablet-width: 768px;
+@desktop-width: 1200px;

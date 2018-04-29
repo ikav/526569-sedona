@@ -1,5 +1,7 @@
 .main-nav {
   position: relative;
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .main-nav__toggle {
@@ -11,4 +13,39 @@
 .main-nav__logo {
   display: block;
   text-align: center;
+  z-index: 2; //чтобы логотип был над фоновой картинкой
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__logo {
+    position: absolute;
+    left: 333px;
+  }
+
+  .main-nav__wrapper {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__logo {
+    position: absolute;
+    left: 550px;
+  }
+
+  .main-nav__wrapper {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
 }

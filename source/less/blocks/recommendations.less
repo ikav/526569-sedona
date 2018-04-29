@@ -13,10 +13,11 @@
 
 .recommendations__list {
   list-style: none;
+  background-color: @background-page;
 }
 
 .recommendations__item {
-  background-color: @background-page;
+  min-height: 138px;
 }
 
 .recommendations__title {
@@ -35,4 +36,26 @@
 
 .recommendations__description:last-child {
   padding-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .recommendations__list {
+    display: flex;
+    background-color: @background-page;
+  }
+
+  .recommendations__item {
+    min-height: 330px; //временно. Для черновой верстки
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .recommendations__list {
+    display: flex;
+    background-color: @background-page;
+  }
+
+  .recommendations__item {
+    min-height: 330px; //временно. Для черновой верстки
+  }
 }

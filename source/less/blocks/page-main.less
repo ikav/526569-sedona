@@ -1,15 +1,58 @@
 .page-main {
-  font-family: "PT Sans", Arial, sans-serif;
+  width: @mobile-width;
+  margin: 0 auto;
+
   text-transform: uppercase;
   text-align: center;
   background-color: @background-page;
 }
 
+.page-main--inner {
+  width: @mobile-width - 40px;
+}
+
 .page-main__title {
   .indents-zero();
-  margin-top: 44px;
-  margin-bottom: 37px;
+  padding-top: 44px;
+  padding-bottom: 37px;
 
   font-size: 18px;
   line-height: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+
+  .page-main--inner {
+    width: @tablet-width - 120px;
+    margin: 0 auto;
+  }
+
+  .page-main__title--index {
+    font-size: 21px;
+  }
+
+  .page-main__title--inner {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .page-main__title--index {
+    font-size: 21px;
+  }
+
+  .page-main__title--inner {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
