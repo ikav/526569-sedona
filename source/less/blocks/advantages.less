@@ -14,7 +14,9 @@
 }
 
 .advantages__better-grand-canyoun {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+  .padding-for-mobile-text();
+
   font-size: 14px;
   line-height: 26px;
 }
@@ -24,21 +26,24 @@
 }
 
 .advantages__title {
-  padding-top: 32px;
+  .padding-for-mobile-text(); //на всякий случай. Вдруг заголовок будет длинным
+  padding-top: 26px;
   font-size: 18px;
   line-height: 26px;
   color: @text-color-title;
 }
 
 .advantages__number {
-  padding-top: 16px;
-  padding-bottom: 20px;
+  .padding-for-mobile-text(); //на всякий случай. Вдруг номер будет длинным
+  padding-top: 9px;
+  padding-bottom: 15px;
   font-size: 14px;
   line-height: 21px;
   color: @text-color-description;
 }
 
 .advantages__description {
+  .padding-for-mobile-text();
   padding-bottom: 30px;
   font-size: 14px;
   line-height: 21px;
@@ -61,35 +66,36 @@
 .advantages__item--second .advantages__title,
 .advantages__item--second .advantages__number,
 .advantages__item--second .advantages__description {
+  .padding-for-mobile-text();
   color: @text-color-link;
 }
 
 /* Отступы между строчек. Для первого и второго преимущества разные */
 /* За каскадом, чтобы не зависело от расположения кода */
 .advantages__item--first .advantages__title {
-  padding-top: 60px;
+  padding-top: 54px;
 }
 
 .advantages__item--first .advantages__number {
-  padding-top: 14px;
-  padding-bottom: 18px;
+  padding-top: 9px;
+  padding-bottom: 16px;
 }
 
 .advantages__item--first .advantages__description {
-  padding-bottom: 42px;
+  padding-bottom: 40px;
 }
 
 .advantages__item--second .advantages__title {
-  padding-top: 43px;
+  padding-top: 39px;
 }
 
 .advantages__item--second .advantages__number {
-  padding-top: 14px;
-  padding-bottom: 18px;
+  padding-top: 10px;
+  padding-bottom: 14px;
 }
 
 .advantages__item--second .advantages__description {
-  padding-bottom: 42px;
+  padding-bottom: 40px;
 }
 
 .advantages__city {
