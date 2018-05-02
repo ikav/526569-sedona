@@ -8,9 +8,9 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs main-nav--opened">
         <!-- Для JS -->
-        <button class="main-nav__toggle button" type="button">X</button>
+        <button class="main-nav__toggle button" type="button"><span class="visually-hidden">X</span></button>
         <div class="main-nav__wrapper">
           <!-- Главное меню -->
           <ul class="main-nav__list site-list">
@@ -134,5 +134,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
   </body>
 </html>
