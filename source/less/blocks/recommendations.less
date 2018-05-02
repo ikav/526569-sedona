@@ -52,15 +52,39 @@
   padding-bottom: 37px;
 }
 
-/* Планшетная версия */
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .recommendations__list {
     display: flex;
     background-color: @background-page;
+    text-align: center;
+    justify-content: space-around;
   }
 
   .recommendations__item {
     .indents-zero();
-    min-height: 330px; //временно. Для черновой верстки
+    width: 165px;
+  }
+
+  .recommendations__title {
+    .indents-zero();
+    margin: 0 auto;
+    padding-top: 160px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+  .recommendations__description {
+    .indents-zero();
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 61px;
+    font-size: 14px;
+    line-height: 21px;
   }
 }
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/

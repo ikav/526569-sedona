@@ -52,6 +52,9 @@
   margin-left: 0;
 }
 
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
@@ -68,11 +71,12 @@
 
   .page-header__img--index {
     width: @tablet-width;
-    height: 520px;
+    height: 550px;
   }
 
   .page-header__img-text--index {
     .indents-zero();
+    margin-top: 14px;
     width: 460px;
     height: 350px;
   }
@@ -92,7 +96,9 @@
   }
 }
 
-/* Десктоп версия */
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
   .page-header {
     width: @desktop-width;
