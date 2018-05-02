@@ -51,12 +51,23 @@
     border: none;
   }
 
+  .site-list__item:hover {
+    background-color: transparent;
+  }
+
   .site-list__link {
     padding-top: 16px;
     color: @text-color-title;
     font-size: 14px;
     line-height: 26px;
+  }
 
+  .site-list__item:not(.site-list__item--active) .site-list__link:hover {
+    color: @text-color-hover;
+  }
+
+  .site-list__link:active {
+    opacity: 0.3;
   }
 
   .site-list__item:first-child {

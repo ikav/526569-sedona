@@ -41,6 +41,9 @@
   text-align: left;
 }
 
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .figure {
     display: flex;
@@ -60,13 +63,54 @@
   }
 
   .figure__capture {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     background-color: @background-add;
+  }
+
+  .figure__title {
+    padding-top: 15px;
+    padding-left: 20px;
+  }
+
+  .figure__author {
+    .indents-zero();
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
+
+  .figure__likes-number {
+    position: absolute;
+    .indents-zero();
+    top: 28px;
+    left: 272px;
+  }
+
+  .figure__like-link {
+    position: absolute;
+    .indents-zero();
+    top: 30px;
+    left: 190px;
+  }
+
+  .figure__likes--first .figure__likes-number {
+    position: absolute;
+    .indents-zero();
+    top: 28px;
+    left: 595px;
+  }
+
+  /* Временно. С графикой нужно будет передалать*/
+  .figure__likes--first .figure__like-link {
+    position: absolute;
+    .indents-zero();
+    top: 30px;
+    left: 510px;
   }
 }
 
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
   .figure__img {
     width: 400px;
