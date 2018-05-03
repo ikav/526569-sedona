@@ -1,7 +1,45 @@
 .comments {
-
   /* Убрать. Временные обводки. */
-  min-height: 1843px;
+  min-height: 1863px;
   background: rgba(255, 45, 82, 0.2);
   box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+.comments__title {
+  .indents-zero();
+  padding-top: 37px;
+  padding-bottom: 12px;
+  .padding-for-mobile-text();
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.comments__description {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .comments {
+    /* Временно для верстки. */
+    min-height: 1650px;
+  }
+
+  .comments__title {
+    .indents-zero();
+    padding-top: 70px;
+    padding-bottom: 12px;
+    .padding-for-tablet-text();
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .comments__description {
+    .padding-for-tablet-text();
+    font-size: 14px;
+    line-height: 24px;
+  }
 }

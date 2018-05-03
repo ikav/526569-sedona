@@ -1,9 +1,28 @@
 .videopresentation {
 
   /* Временно для верстки */
-  min-height: 430px;
+  min-height: 452px;
   background: rgba(255, 45, 82, 0.2);
   box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+.videopresentation__title {
+  .indents-zero();
+  .padding-for-mobile-text();
+  padding-top: 28px;
+  padding-bottom: 12px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.videopresentation__description {
+  /* .padding-for-mobile-text(); */
+  padding-left: 21px;
+  padding-right: 21px;
+
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 /***********************************************/
@@ -12,6 +31,22 @@
 @media (min-width: @tablet-width) {
   .videopresentation {
     /* Временно для верстки */
-    min-height: 725px;
+    min-height: 745px;
+  }
+
+  .videopresentation__title {
+    .indents-zero();
+    padding-top: 64px;
+    padding-bottom: 12px;
+    .padding-for-tablet-text();
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .videopresentation__description {
+    .padding-for-tablet-text();
+    padding-bottom: 70px;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
