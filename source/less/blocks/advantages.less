@@ -194,14 +194,36 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
+  .advantages__better-grand-canyoun {
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+
+  .advantages__text {
+    width: 400px;
+  }
+
   .advantages__city {
-    width: 900px;
+    width: 800px;
     background-image: url("../img/main-city-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
   }
 
   .advantages__bridge {
-    width: 900px;
+    width: 800px;
     background-image: url("../img/main-bridge-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
     order: -1;
+  }
+
+  .advantages__item .advantages__title {
+    padding-top: 51px;
+  }
+
+  .advantages__item .advantages__number,
+  .advantages__item .advantages__description {
+    width: 270px;
+  }
+
+  .advantages__item .advantages__description {
+    padding-top: 22px;
   }
 }
