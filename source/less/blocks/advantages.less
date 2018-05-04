@@ -50,6 +50,12 @@
   color: @text-color-description;
 }
 
+.advantages__item--fifth .advantages__description {
+  /* Особые отступы, чтобы одну букву перенестий! */
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
 .advantages__item--first,
 .advantages__item--second {
   background-color: @background-main;
@@ -215,12 +221,21 @@
   }
 
   .advantages__item .advantages__title {
+    padding-top: 44px;
+  }
+
+  .advantages__item--first .advantages__title,
+  .advantages__item--second .advantages__title {
     padding-top: 51px;
   }
 
   .advantages__item .advantages__number,
   .advantages__item .advantages__description {
-    width: 270px;
+    width: 285px;
+  }
+
+  .advantages__item--second .advantages__description {
+    width: 230px;
   }
 
   .advantages__item .advantages__description {

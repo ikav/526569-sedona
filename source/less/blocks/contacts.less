@@ -4,7 +4,7 @@
   text-align: center;
 
   /* Убрать. Временные обводки. */
-  min-height: 666px;
+  min-height: 600px;
   background: rgba(255, 45, 82, 0.2);
   box-shadow: 0 0 0 3px rgb(255, 45, 82);
 }
@@ -23,6 +23,7 @@
 }
 
 .contacts__description {
+  .padding-for-mobile-text();
   padding-bottom: 36px;
   font-size: 14px;
   line-height: 24px;
@@ -31,4 +32,27 @@
 
 .contacts__link {
   text-decoration: none;
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .contacts {
+
+    /* Убрать. Временные обводки. */
+    min-height: 678px;
+  }
+
+  .contacts__title {
+    padding-top: 50px;
+    padding-bottom: 26px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .contacts__description {
+    .padding-for-desktop-text();
+    padding-bottom: 47px;
+  }
 }

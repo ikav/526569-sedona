@@ -68,6 +68,18 @@
     width: 165px;
   }
 
+  .recommendations__item--housing {
+    order: 1;
+  }
+
+    .recommendations__item--food {
+    order: 2;
+  }
+
+  .recommendations__item--souvenirs {
+    order: 3;
+  }
+
   .recommendations__title {
     .indents-zero();
     margin: 0 auto;
@@ -75,6 +87,7 @@
     font-size: 21px;
     line-height: 26px;
   }
+
   .recommendations__description {
     .indents-zero();
     margin: 0 auto;
@@ -88,3 +101,33 @@
 /***********************************************/
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
+@media (min-width: @desktop-width) {
+
+  .recommendations__item {
+    width: 294px;
+  }
+
+  .recommendations__item--housing {
+    order: 1;
+  }
+
+    .recommendations__item--food {
+    order: 2;
+  }
+
+  .recommendations__item--souvenirs {
+    order: 3;
+  }
+
+  .recommendations__title {
+    padding-top: 158px;
+  }
+
+  .recommendations__description {
+    padding-bottom: 84px;
+  }
+
+  .recommendations__description--souvenirs {
+    width: 220px;
+  }
+}
