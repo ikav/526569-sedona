@@ -50,3 +50,19 @@
     line-height: 24px;
   }
 }
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .videopresentation__title {
+    padding-top: 66px;
+    padding-bottom: 12px;
+    .padding-for-desktop-text();
+  }
+
+  .videopresentation__description {
+    .padding-for-desktop-text();
+    padding-bottom: 70px;
+  }
+}

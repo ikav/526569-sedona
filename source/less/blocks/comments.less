@@ -43,3 +43,22 @@
     line-height: 24px;
   }
 }
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .comments {
+    /* Временно для верстки. */
+    min-height: 1490px;
+  }
+
+  .comments__title {
+    padding-top: 107px;
+    .padding-for-desktop-text();
+  }
+
+  .comments__description {
+    .padding-for-desktop-text();
+  }
+}

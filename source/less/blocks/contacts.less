@@ -35,13 +35,13 @@
 }
 
 /***********************************************/
-/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
-@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) {
   .contacts {
 
     /* Убрать. Временные обводки. */
-    min-height: 678px;
+    min-height: 666px;
   }
 
   .contacts__title {
@@ -49,6 +49,22 @@
     padding-bottom: 26px;
     font-size: 30px;
     line-height: 35px;
+  }
+
+  .contacts__description {
+    .padding-for-tablet-text();
+    padding-bottom: 44px;
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .contacts {
+
+    /* Убрать. Временные обводки. */
+    min-height: 678px;
   }
 
   .contacts__description {
