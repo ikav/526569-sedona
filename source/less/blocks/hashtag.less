@@ -5,8 +5,7 @@
 
 .hashtag {
   margin-top: 33px;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 35px;
   text-transform: uppercase;
 }
 
@@ -18,23 +17,11 @@
   text-decoration: none;
 }
 
-
 /***********************************************/
-/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
-@media (min-width: @desktop-width) {
-  .hashtag__link--index {
-    /* Возможно, временно. Убрать после окончательной разметки*/
-    margin-left: -15px;
-  }
-
-  .hashtag__link--photo {
-    /* Возможно, временно. Убрать после окончательной разметки*/
-    margin-left: -8px;
-  }
-
-  .hashtag__link--form {
-    /* Возможно, временно. Убрать после окончательной разметки*/
-    margin-left: -12px;
+@media (min-width: @tablet-width) {
+  .hashtag {
+    .indents-zero();
   }
 }
