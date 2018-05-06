@@ -28,10 +28,26 @@
 
 /* Первая страница. Картинка выше, надпись другая */
 .page-header__img--index {
+  position: relative;
   width: 320px;
   height: 389px;
   background-position-x: -224px;
   background-position-y: 0;
+}
+
+.page-header__img--index::after {
+  content: "";
+
+  position: absolute;
+  top: 362px;
+  left: 0;
+  width: 320px;
+  height: 27px;
+
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
 }
 
 .page-header__img-text--index {
@@ -41,10 +57,26 @@
 
 /* Внутренние страницы */
 .page-header__img--inner {
+  position: relative;
   width: 320px;
   height: 158px;
   background-position-x: -224px;
   background-position-y: -230px;
+}
+
+.page-header__img--inner::after {
+  content: "";
+
+  position: absolute;
+  top: 131px;
+  left: 0;
+  width: 320px;
+  height: 27px;
+
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
 }
 
 .page-header__img-text--inner {
@@ -70,28 +102,51 @@
   }
 
   .page-header__img--index {
+    margin-top: 0;
     width: @tablet-width;
-    height: 550px;
+    height: 518px;
+  }
+
+  .page-header__img--index::after {
+    top: 462px;
+    left: 0;
+    width: @tablet-width;
+    height: 57px;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
   }
 
   .page-header__img-text--index {
     .indents-zero();
-    margin-top: 14px;
+    margin-top: -16px;
     width: 460px;
     height: 350px;
   }
 
   .page-header__img--inner {
     width: @tablet-width;
-    height: 320px;
-    /* Должен быть такой сдвиг по оси Х, чтобы картинка была в соответствии с макетом */
-    /* background-position-x: -224px;
-    background-position-y: 0; */
+    margin-top: 0;
+    height: 288px;
+  }
+
+  .page-header__img--inner::after {
+    top: 232px;
+    left: 0;
+    width: @tablet-width;
+    height: 57px;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
   }
 
   .page-header__img-text--inner {
     .indents-zero();
-    margin-top: 10px;
+    margin-top: -22px;
     width: 456px;
     height: 80px;
   }
@@ -109,9 +164,28 @@
     width: @desktop-width;
   }
 
+  .page-header__img--index::after {
+    width: @desktop-width;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
+
   .page-header__img--inner {
     width: @desktop-width;
-    height: 330px;
+    height: 298px;
+  }
+
+  .page-header__img--inner::after {
+    top: 242px;
+    width: @desktop-width;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
   }
 
   .page-header__img-text--inner {

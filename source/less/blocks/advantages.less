@@ -61,6 +61,25 @@
   background-color: @background-main;
 }
 
+.advantages__item--first {
+  position: relative;
+}
+
+.advantages__item--first::before {
+  content: "";
+
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 320px;
+  height: 37px;
+
+  background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+}
+
 .advantages__list--third {
   background-color: @background-add;
 }
@@ -151,6 +170,11 @@
   .advantages__item--first,
   .advantages__item--second {
     display: flex;
+  }
+
+  .advantages__item--first::before {
+    width: 0;
+    height: 0;
   }
 
   .advantages__list--third {

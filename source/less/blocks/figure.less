@@ -32,7 +32,27 @@
   text-transform: none;
 }
 
+.figure__like-link {
+  position: relative;
+}
+
+.figure__like-link::before {
+  content: "";
+
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 22px;
+  height: 20px;
+
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+}
+
 .figure__likes-number {
+  margin-left: 37px;
   font-size: 14px;
   line-height: 24px;
 }
@@ -92,6 +112,10 @@
     left: 190px;
   }
 
+  .figure__like-link::before {
+    left: 50px;
+  }
+
   .figure__likes--first .figure__likes-number {
     position: absolute;
     .indents-zero();
@@ -99,12 +123,11 @@
     left: 595px;
   }
 
-  /* Временно. С графикой нужно будет передалать*/
   .figure__likes--first .figure__like-link {
     position: absolute;
     .indents-zero();
     top: 30px;
-    left: 510px;
+    left: 515px;
   }
 }
 
@@ -153,12 +176,16 @@
     left: 265px;
   }
 
+  .figure__like-link::before {
+    background-image: url("../img/icon-like-desktop.svg");
+  }
+
   .figure__likes--first .figure__likes-number {
     left: 1148px;
   }
 
   /* Временно. С графикой нужно будет передалать*/
   .figure__likes--first .figure__like-link {
-    left: 1060px;
+    left: 1065px;
   }
 }
