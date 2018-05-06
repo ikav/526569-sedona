@@ -19,6 +19,12 @@
   .indents-zero();
 }
 
+.page-header__logo {
+  display: block;
+  text-align: center;
+  z-index: 2; //чтобы логотип был над фоновой картинкой
+}
+
 .page-header__img {
   margin-top: -32px;
   background-color: @background-img;
@@ -92,6 +98,11 @@
     width: @tablet-width;
   }
 
+  .page-header__logo {
+    position: absolute;
+    left: 333px;
+  }
+
   .page-header__img {
     display: flex;
     justify-content: center;
@@ -159,6 +170,32 @@
   .page-header {
     width: @desktop-width;
   }
+
+  .page-header__logo {
+    left: 550px;
+  }
+
+  .page-header__logo-image {
+    position: relative;
+  }
+
+  /*
+  Заготовка под логотип
+
+  .page-header__logo::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -43px;
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 115px 94px 0 94px;
+    border-color: @background-main transparent transparent transparent;
+  } */
 
   .page-header__img--index {
     width: @desktop-width;

@@ -4,12 +4,6 @@
   margin: 0 auto;
 }
 
-.main-nav__logo {
-  display: block;
-  text-align: center;
-  z-index: 2; //чтобы логотип был над фоновой картинкой
-}
-
 .main-nav__toggle {
   position: absolute;
   right: 1px;
@@ -102,11 +96,6 @@
     margin: 0;
   }
 
-  .main-nav__logo {
-    position: absolute;
-    left: 333px;
-  }
-
   .main-nav__wrapper {
     width: @tablet-width;
     margin: 0 auto;
@@ -122,33 +111,6 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
-  .main-nav__logo {
-    left: 550px;
-  }
-
-  .main-nav__logo-image {
-    position: relative;
-  }
-
-
-  /*
-  Заготовка под логотип
-
-  .main-nav__logo::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -43px;
-    width: 0;
-    height: 0;
-
-    border-style: solid;
-    border-width: 115px 94px 0 94px;
-    border-color: @background-main transparent transparent transparent;
-  } */
-
   .main-nav__wrapper {
     width: @desktop-width;
   }
