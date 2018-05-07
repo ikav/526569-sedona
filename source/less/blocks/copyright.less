@@ -1,9 +1,45 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .indents-zero();
-  margin-top: 48px;
+  margin-top: 40px;
   margin-bottom: 32px;
+  width: 128px;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
+}
+
+.copyright__link {
+  display: block;
+  width: 26px;
+  height: 34px;
+
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-color: transparent;
+
+  background-image: url("../img/logo-htmlacademy.svg");
+}
+
+.copyright__link:hover {
+  background-image: url("../img/logo-htmlacademy-hover.svg");
+}
+
+.copyright__link:active {
+  background-image: url("../img/logo-htmlacademy.svg");
+  opacity: 0.3;
+}
+
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .copyright {
+    .indents-zero();
+  }
 }

@@ -6,46 +6,112 @@
 
 .main-nav__toggle {
   position: absolute;
-  right: 0;
+  right: 1px;
   top: 0;
-}
+  z-index: 3;
 
-.main-nav__logo {
   display: block;
-  text-align: center;
-  z-index: 2; //чтобы логотип был над фоновой картинкой
+  width: 65px;
+  height: 55px;
+
+  cursor: pointer;
+  border: none;
 }
 
+/* Меню навигации (гамбургер) для открытия меню */
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 23px;
+
+  width: 23px;
+  height: 4px;
+
+  background-color: @background-main;
+  box-shadow: 0 8px 0 0 @background-main, 0 16px 0 0 @background-main;
+}
+
+/* Кнопка для закрытия меню */
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  left: auto;
+  right: 1px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 26px;
+    left: 22px;
+
+    width: 27px;
+    height: 4px;
+
+    background-color: @text-color-link;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+/* Мобильная версия. Открытие и закрытие меню */
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    background: transparent;
+  }
+
+  .main-nav--opened .site-list__item {
+    display: block;
+  }
+
+  /* При отключенном JS */
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
+  }
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .main-nav {
     width: auto;
     margin: 0;
   }
 
-  .main-nav__logo {
-    position: absolute;
-    left: 333px;
-  }
-
   .main-nav__wrapper {
     width: @tablet-width;
     margin: 0 auto;
   }
+
+  /* Скроем кнопку открыть/закрыть главное меню */
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
-  .main-nav {
-    width: auto;
-    margin: 0;
-  }
-
-  .main-nav__logo {
-    position: absolute;
-    left: 550px;
-  }
-
   .main-nav__wrapper {
     width: @desktop-width;
-    margin: 0 auto;
   }
 }

@@ -14,7 +14,9 @@
 }
 
 .advantages__better-grand-canyoun {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+  .padding-for-mobile-text();
+
   font-size: 14px;
   line-height: 26px;
 }
@@ -24,30 +26,58 @@
 }
 
 .advantages__title {
-  padding-top: 32px;
+  .padding-for-mobile-text(); //на всякий случай. Вдруг заголовок будет длинным
+  padding-top: 26px;
   font-size: 18px;
   line-height: 26px;
   color: @text-color-title;
 }
 
 .advantages__number {
-  padding-top: 16px;
-  padding-bottom: 20px;
+  .padding-for-mobile-text(); //на всякий случай. Вдруг номер будет длинным
+  padding-top: 9px;
+  padding-bottom: 15px;
   font-size: 14px;
   line-height: 21px;
   color: @text-color-description;
 }
 
 .advantages__description {
+  .padding-for-mobile-text();
   padding-bottom: 30px;
   font-size: 14px;
   line-height: 21px;
   color: @text-color-description;
 }
 
+.advantages__item--fifth .advantages__description {
+  /* Особые отступы, чтобы одну букву перенестий! */
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
 .advantages__item--first,
 .advantages__item--second {
   background-color: @background-main;
+}
+
+.advantages__item--first {
+  position: relative;
+}
+
+.advantages__item--first::before {
+  content: "";
+
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 320px;
+  height: 37px;
+
+  background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
 }
 
 .advantages__list--third {
@@ -61,35 +91,36 @@
 .advantages__item--second .advantages__title,
 .advantages__item--second .advantages__number,
 .advantages__item--second .advantages__description {
+  .padding-for-mobile-text();
   color: @text-color-link;
 }
 
 /* Отступы между строчек. Для первого и второго преимущества разные */
 /* За каскадом, чтобы не зависело от расположения кода */
 .advantages__item--first .advantages__title {
-  padding-top: 60px;
+  padding-top: 54px;
 }
 
 .advantages__item--first .advantages__number {
-  padding-top: 14px;
-  padding-bottom: 18px;
+  padding-top: 9px;
+  padding-bottom: 16px;
 }
 
 .advantages__item--first .advantages__description {
-  padding-bottom: 42px;
+  padding-bottom: 40px;
 }
 
 .advantages__item--second .advantages__title {
-  padding-top: 43px;
+  padding-top: 39px;
 }
 
 .advantages__item--second .advantages__number {
-  padding-top: 14px;
-  padding-bottom: 18px;
+  padding-top: 10px;
+  padding-bottom: 14px;
 }
 
 .advantages__item--second .advantages__description {
-  padding-bottom: 42px;
+  padding-bottom: 40px;
 }
 
 .advantages__city {
@@ -106,52 +137,132 @@
   background-repeat: no-repeat;
 }
 
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
+  .advantages__better-grand-canyoun {
+    margin-bottom: 50px;
+    .padding-for-tablet-text();
+  }
+
+  .advantages__text {
+    width: 256px;
+  }
+
   .advantages__city {
     width: 512px;
+    height: 256px;
     background-image: url("../img/main-city-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
+    background-size: cover;
+    background-position: center 0;
   }
 
   .advantages__bridge {
     width: 512px;
+    height: 256px;
     background-image: url("../img/main-bridge-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
     order: -1;
+    background-size: cover;
+    background-position: center 0;
   }
 
   .advantages__item--first,
   .advantages__item--second {
     display: flex;
-    align-items: center;
+  }
+
+  .advantages__item--first::before {
+    width: 0;
+    height: 0;
   }
 
   .advantages__list--third {
     display: flex;
     justify-content: space-between;
     min-height: 256px; //временно, для черновой верстки
+  }
+
+  .advantages__item--first .advantages__title,
+  .advantages__item--first .advantages__number,
+  .advantages__item--first .advantages__description,
+  .advantages__item--second .advantages__title,
+  .advantages__item--second .advantages__number,
+  .advantages__item--second .advantages__description {
+    .indents-zero();
+    margin: 0 auto;
+  }
+
+  .advantages__item .advantages__title {
+    .indents-zero();
+    padding-top: 46px;
+    margin: 0 auto;
+    width: 151px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .advantages__item .advantages__number,
+  .advantages__item .advantages__description {
+    .indents-zero();
+    width: 168px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .advantages__item .advantages__number {
+    padding-top: 9px;
+  }
+
+  .advantages__item .advantages__description {
+    padding-top: 20px;
   }
 }
 
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
+  .advantages__better-grand-canyoun {
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+
+  .advantages__text {
+    width: 400px;
+  }
+
   .advantages__city {
-    width: 900px;
+    width: 800px;
     background-image: url("../img/main-city-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
   }
 
   .advantages__bridge {
-    width: 900px;
+    width: 800px;
     background-image: url("../img/main-bridge-mobile@1x.jpg"); //похоже, должно быть другое изображение. Это маленькое
     order: -1;
   }
 
-  .advantages__item--first,
-  .advantages__item--second {
-    display: flex;
-    align-items: center;
+  .advantages__item .advantages__title {
+    padding-top: 44px;
   }
 
-  .advantages__list--third {
-    display: flex;
-    justify-content: space-between;
-    min-height: 256px; //временно, для черновой верстки
+  .advantages__item--first .advantages__title,
+  .advantages__item--second .advantages__title {
+    padding-top: 51px;
+  }
+
+  .advantages__item .advantages__number,
+  .advantages__item .advantages__description {
+    width: 285px;
+  }
+
+  .advantages__item--second .advantages__description {
+    width: 230px;
+  }
+
+  .advantages__item .advantages__description {
+    padding-top: 22px;
   }
 }

@@ -3,6 +3,8 @@
   text-transform: uppercase;
   text-align: center;
 
+  /* Убрать. Временные обводки. */
+  min-height: 600px;
   background: rgba(255, 45, 82, 0.2);
   box-shadow: 0 0 0 3px rgb(255, 45, 82);
 }
@@ -13,15 +15,16 @@
 }
 
 .contacts__title {
-  padding-top: 32px;
-  padding-bottom: 26px;
+  padding-top: 22px;
+  padding-bottom: 20px;
   font-size: 21px;
   line-height: 26px;
   color: @text-color-title;
 }
 
 .contacts__description {
-  padding-bottom: 40px;
+  .padding-for-mobile-text();
+  padding-bottom: 36px;
   font-size: 14px;
   line-height: 24px;
   color: @text-color-description;
@@ -29,4 +32,43 @@
 
 .contacts__link {
   text-decoration: none;
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .contacts {
+
+    /* Убрать. Временные обводки. */
+    min-height: 666px;
+  }
+
+  .contacts__title {
+    padding-top: 50px;
+    padding-bottom: 26px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .contacts__description {
+    .padding-for-tablet-text();
+    padding-bottom: 44px;
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .contacts {
+
+    /* Убрать. Временные обводки. */
+    min-height: 678px;
+  }
+
+  .contacts__description {
+    .padding-for-desktop-text();
+    padding-bottom: 47px;
+  }
 }

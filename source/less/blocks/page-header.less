@@ -19,8 +19,14 @@
   .indents-zero();
 }
 
+.page-header__logo {
+  display: block;
+  text-align: center;
+  z-index: 2; //чтобы логотип был над фоновой картинкой
+}
+
 .page-header__img {
-  margin-top: -28px;
+  margin-top: -32px;
   background-color: @background-img;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -28,10 +34,26 @@
 
 /* Первая страница. Картинка выше, надпись другая */
 .page-header__img--index {
+  position: relative;
   width: 320px;
   height: 389px;
   background-position-x: -224px;
   background-position-y: 0;
+}
+
+.page-header__img--index::after {
+  content: "";
+
+  position: absolute;
+  top: 362px;
+  left: 0;
+  width: 320px;
+  height: 27px;
+
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
 }
 
 .page-header__img-text--index {
@@ -41,10 +63,26 @@
 
 /* Внутренние страницы */
 .page-header__img--inner {
+  position: relative;
   width: 320px;
   height: 158px;
   background-position-x: -224px;
   background-position-y: -230px;
+}
+
+.page-header__img--inner::after {
+  content: "";
+
+  position: absolute;
+  top: 131px;
+  left: 0;
+  width: 320px;
+  height: 27px;
+
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
 }
 
 .page-header__img-text--inner {
@@ -52,82 +90,142 @@
   margin-left: 0;
 }
 
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
-    margin: 0 auto;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: 333px;
   }
 
   .page-header__img {
-    .indents-zero();
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-size: cover;
+    background-position: center 0;
   }
 
   .page-header__img--index {
+    margin-top: 0;
     width: @tablet-width;
-    height: 520px;
-    background-position-x: 0;
-    background-position-y: 0;
+    height: 518px;
+  }
+
+  .page-header__img--index::after {
+    top: 462px;
+    left: 0;
+    width: @tablet-width;
+    height: 57px;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
   }
 
   .page-header__img-text--index {
     .indents-zero();
+    margin-top: -16px;
     width: 460px;
     height: 350px;
   }
 
   .page-header__img--inner {
     width: @tablet-width;
-    height: 290px;
-    background-position-x: -224px;
-    background-position-y: 0;
+    margin-top: 0;
+    height: 288px;
+  }
+
+  .page-header__img--inner::after {
+    top: 232px;
+    left: 0;
+    width: @tablet-width;
+    height: 57px;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
   }
 
   .page-header__img-text--inner {
     .indents-zero();
+    margin-top: -22px;
     width: 456px;
     height: 80px;
   }
 }
 
-/* Десктоп версия */
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
   .page-header {
     width: @desktop-width;
-    margin: 0 auto;
   }
 
-  .page-header__img {
-    .indents-zero();
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .page-header__logo {
+    left: 550px;
   }
+
+  .page-header__logo-image {
+    position: relative;
+  }
+
+  /*
+  Заготовка под логотип
+
+  .page-header__logo::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -43px;
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 115px 94px 0 94px;
+    border-color: @background-main transparent transparent transparent;
+  } */
 
   .page-header__img--index {
     width: @desktop-width;
-    height: 520px;
-    background-position-x: 0;
-    background-position-y: 0;
   }
 
-  .page-header__img-text--index {
-    .indents-zero();
-    width: 460px;
-    height: 350px;
+  .page-header__img--index::after {
+    width: @desktop-width;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
   }
 
   .page-header__img--inner {
     width: @desktop-width;
-    height: 302px;
-    background-position-x: 0;
-    background-position-y: 0;
+    height: 298px;
+  }
+
+  .page-header__img--inner::after {
+    top: 242px;
+    width: @desktop-width;
+
+    background: rgba(54, 194, 89, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
+
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
   }
 
   .page-header__img-text--inner {
-    .indents-zero();
     width: 456px;
     height: 80px;
   }

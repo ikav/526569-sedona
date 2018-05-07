@@ -13,45 +13,65 @@
 
 .page-main__title {
   .indents-zero();
-  padding-top: 44px;
-  padding-bottom: 37px;
-
+  padding-top: 38px;
+  padding-bottom: 28px;
+  .padding-for-mobile-text();
   font-size: 18px;
   line-height: 26px;
 }
 
+.page-main__title--inner {
+  padding-bottom: 26px;
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .page-main {
     width: @tablet-width;
-    margin: 0 auto;
   }
 
   .page-main--inner {
     width: @tablet-width - 120px;
-    margin: 0 auto;
   }
 
   .page-main__title--index {
+    padding-top: 48px;
+    padding-bottom: 28px;
+    .padding-for-tablet-text();
     font-size: 21px;
+    line-height: 26px;
   }
 
   .page-main__title--inner {
+    .indents-zero();
+    padding-top: 70px;
+    padding-bottom: 26px;
+    .padding-for-tablet-text();
     font-size: 30px;
     line-height: 35px;
   }
 }
 
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
   .page-main {
     width: @desktop-width;
-    margin: 0 auto;
   }
 
   .page-main__title--index {
+    padding-left: 350px;
+    padding-right: 350px;
     font-size: 21px;
+    line-height: 26px;
   }
 
   .page-main__title--inner {
+    .padding-for-desktop-text();
+    padding-top: 106px;
     font-size: 30px;
     line-height: 35px;
   }

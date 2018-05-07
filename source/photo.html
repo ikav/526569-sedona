@@ -8,9 +8,9 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs main-nav--opened">
         <!-- Для JS -->
-        <button class="main-nav__toggle button" type="button">X</button>
+        <button class="main-nav__toggle button" type="button"><span class="visually-hidden">X</span></button>
         <div class="main-nav__wrapper">
           <!-- Главное меню -->
           <ul class="main-nav__list site-list">
@@ -28,11 +28,10 @@
             </li>
           </ul>
         </div>
-
       </nav>
       <!-- По щелчку переходим на главную страницу -->
-      <a class="main-nav__logo" href="index.html">
-        <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="103" height="84" alt="Логотипа города Седона">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="103" height="84" alt="Логотипа города Седона">
       </a>
       <div class="page-header__img page-header__img--inner">
         <img class="page-header__img-text page-header__img-text--inner" src="img/text-sedona.svg" width="229" height="40" alt="Добро пожаловать в Седону!">
@@ -45,18 +44,18 @@
 
       <section class="photogalary">
         <h2 class="visually-hidden photogalary__title">Фотогалерея</h2>
-        <p class="photogalary__description">Не можете решиться на путешествие из-за курса? Фотографии помогут забыть вам о политике и экономике.</p>
+        <p class="photogalary__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам&nbsp;забыть о политике и экономике.</p>
         <ul class="photogalary__list">
           <li class="photogalary__item">
             <figure class="figure">
               <img class="figure__img figure__img--foreign" src="/img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
               <figcaption class="figure__capture">
-                <div>
+                <div class="figure__text">
                   <p class="figure__title">Неродные просторы</p>
                   <p class="figure__author">Автор фото: Борис</p>
                 </div>
-                <div>
-                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
+                <div class="figure__likes figure__likes--first">
+                  <a class="figure__like-link" href="#" title="Нравится"><span class="visually-hidden">Нравится</span></a>
                   <b class="figure__likes-number">1350</b>
                 </div>
               </figcaption>
@@ -66,14 +65,10 @@
             <figure class="figure">
               <img class="figure__img" src="/img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
               <figcaption class="figure__capture">
-                <div>
-                  <p class="figure__title">Местная растительность</p>
-                  <p class="figure__author">Автор фото: Сергей</p>
-                </div>
-                <div>
-                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
-                  <b class="figure__likes-number">143</b>
-                </div>
+                <p class="figure__title">Местная растительность</p>
+                <p class="figure__author">Автор фото: Сергей</p>
+                <a class="figure__like-link" href="#" title="Нравится"><span class="visually-hidden">Нравится</span></a>
+                <b class="figure__likes-number">143</b>
               </figcaption>
             </figure>
           </li>
@@ -81,14 +76,10 @@
             <figure class="figure">
               <img class="figure__img" src="/img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
               <figcaption class="figure__capture">
-                <div>
-                  <p class="figure__title">Дорога на север</p>
-                  <p class="figure__author">Автор фото: Петр</p>
-                </div>
-                <div>
-                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
-                  <b class="figure__likes-number">96</b>
-                </div>
+                <p class="figure__title">Дорога на север</p>
+                <p class="figure__author">Автор фото: Петр</p>
+                <a class="figure__like-link" href="#" title="Нравится"><span class="visually-hidden">Нравится</span></a>
+                <b class="figure__likes-number">96</b>
               </figcaption>
             </figure>
           </li>
@@ -96,14 +87,10 @@
             <figure class="figure">
               <img class="figure__img" src="/img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
               <figcaption class="figure__capture">
-                <div>
-                  <p class="figure__title">Мост дьявола</p>
-                  <p class="figure__author">Автор фото: Антон</p>
-                </div>
-                <div>
-                  <a class="figure__like-link" href="#" title="Нравится">Нравится</a>
-                  <b class="figure__likes-number">254</b>
-                </div>
+                <p class="figure__title">Мост дьявола</p>
+                <p class="figure__author">Автор фото: Антон</p>
+                <a class="figure__like-link" href="#" title="Нравится"><span class="visually-hidden">Нравится</span></a>
+                <b class="figure__likes-number">254</b>
               </figcaption>
             </figure>
           </li>
@@ -111,9 +98,8 @@
       </section>
       <section class="videopresentation">
         <h2 class="videopresentation__title">Все еще сомневаетесь?</h2>
-        <p class="videopresentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они еще не подорожали в очередной раз!</p>
+        <p class="videopresentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <!-- Здесь будет видеопрезентация -->
-        <p>На данном этапе верстать не нужно</p>
       </section>
     </main>
 
@@ -121,28 +107,31 @@
       <div class="page-footer__wrapper page-footer__wrapper--photo">
         <!-- Хэштег -->
         <div class="page-footer__hashtag hashtag">
-          <a class="hashtag__link" href="#">#visitsedona</a>
+          <a class="hashtag__link hashtag__link--inner hashtag__link--photo" href="#">#visitsedona</a>
         </div>
         <!-- Социальные сети -->
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Мы в Твиттере</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">Мы на Ютюбе</a>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Мы на Ютюбе</span></a>
             </li>
           </ul>
         </div>
         <!-- Копирайт -->
         <div class="page-footer__copyright copyright">
           <span class="copyright__text">Разработано </span>
-          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/14" title="HTML Academy">HTML Academy</a>
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/14" title="HTML Academy"><span class="visually-hidden">HTML Academy</span></a>
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
+
   </body>
 </html>

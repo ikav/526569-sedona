@@ -12,50 +12,226 @@
 }
 
 .recommendations__list {
+  text-align: left;
   list-style: none;
   background-color: @background-page;
 }
 
 .recommendations__item {
-  min-height: 138px;
+  position: relative;
+  padding-left: 70px;
+}
+
+.recommendations__item--housing::before {
+  content: "";
+
+  position: absolute;
+  top: 25px;
+  left: 22px;
+  width: 38px;
+  height: 36px;
+
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+}
+
+.recommendations__item--souvenirs::before {
+  content: "";
+
+  position: absolute;
+  top: 17px;
+  left: 25px;
+  width: 32px;
+  height: 38px;
+
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+}
+
+.recommendations__item--food::before {
+  content: "";
+
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  width: 37px;
+  height: 34px;
+
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
 }
 
 .recommendations__title {
-  padding-top: 40px;
-  padding-bottom: 22px;
+  padding-bottom: 14px;
   font-size: 18px;
   line-height: 26px;
   color: @text-color-title;
 }
 
 .recommendations__description {
+  padding-right: 20px;
   font-size: 14px;
   line-height: 21px;
   color: @text-color-description;
 }
 
-.recommendations__description:last-child {
-  padding-bottom: 40px;
+.recommendations__title--housing {
+  padding-top: 34px;
+  padding-bottom: 14px;
 }
 
+.recommendations__title--souvenirs {
+  padding-top: 28px;
+}
+
+.recommendations__title--food {
+  padding-top: 28px;
+}
+
+.recommendations__description--food {
+  padding-bottom: 37px;
+}
+
+/* Оставляем мобильный блок */
+.recommendations__description--souvenirs-mobile {
+  display: block;
+}
+
+/* Скрываем блок с неразрывными пробелами*/
+.recommendations__description--souvenirs {
+  display: none;
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .recommendations__list {
     display: flex;
     background-color: @background-page;
+    text-align: center;
+    justify-content: space-around;
   }
 
   .recommendations__item {
-    min-height: 330px; //временно. Для черновой верстки
+    .indents-zero();
+    width: 165px;
+  }
+
+  .recommendations__item--housing {
+    order: 1;
+  }
+
+  .recommendations__item--food {
+    order: 2;
+  }
+
+  .recommendations__item--souvenirs {
+    order: 3;
+  }
+
+  /* Изменяем размеры изображения и позиционирования */
+  .recommendations__item--housing::before {
+    top: 59px;
+    left: 45px;
+    width: 75px;
+    height: 72px;
+  }
+
+  /* Изменяем размеры изображения и позиционирования */
+  .recommendations__item--souvenirs::before {
+    top: 56px;
+    left: 50px;
+    width: 64px;
+    height: 75px;
+  }
+
+  /* Изменяем размеры изображения и позиционирования */
+  .recommendations__item--food::before {
+    top: 62px;
+    left: 45px;
+    width: 77px;
+    height: 68px;
+  }
+
+  .recommendations__title {
+    .indents-zero();
+    margin: 0 auto;
+    padding-top: 160px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .recommendations__description {
+    .indents-zero();
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 61px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  /* Скрываем мобильный блок */
+  .recommendations__description--souvenirs-mobile {
+    display: none;
+  }
+
+  /* Оставляем блок с неразрывными пробелами*/
+  .recommendations__description--souvenirs {
+    display: block;
   }
 }
 
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
-  .recommendations__list {
-    display: flex;
-    background-color: @background-page;
+  .recommendations__item {
+    width: 294px;
   }
 
-  .recommendations__item {
-    min-height: 330px; //временно. Для черновой верстки
+  .recommendations__item--housing {
+    order: 1;
+  }
+
+  .recommendations__item--food {
+    order: 2;
+  }
+
+  .recommendations__item--souvenirs {
+    order: 3;
+  }
+
+  /* Изменяем позиционирование */
+  .recommendations__item--housing::before {
+    left: 108px;
+  }
+
+  /* Изменяем позиционирование */
+  .recommendations__item--souvenirs::before {
+    left: 115px;
+  }
+
+  /* Изменяем позиционирование */
+  .recommendations__item--food::before {
+    left: 108px;
+  }
+
+  .recommendations__title {
+    padding-top: 158px;
+  }
+
+  .recommendations__description {
+    padding-bottom: 84px;
+  }
+
+  .recommendations__description--souvenirs {
+    width: 220px;
   }
 }

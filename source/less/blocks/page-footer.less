@@ -7,39 +7,79 @@
   background-color: @background-page;
 }
 
+.page-footer--photo {
+  padding-top: 30px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @tablet-width) {
   .page-footer {
     width: @tablet-width;
+    margin: 0 auto;
   }
 
   .page-footer__wrapper {
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    padding-bottom: 36px;
+  }
+
+  .page-footer__wrapper--index {
+    padding-top: 37px;
   }
 
   .page-footer--photo {
     /* Страница фотогалереи имеет отступы по 60px */
     width: @tablet-width - 120px;
+    padding-top: 64px;
+    padding-left: 0;
   }
 
   .page-footer__wrapper--photo {
     /* Страница фотогалереи надписи прижаты к краям */
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+  }
+
+  .page-footer--form {
+    padding-top: 39px;
+    padding-left: 0;
   }
 }
 
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
 @media (min-width: @desktop-width) {
   .page-footer {
     width: @desktop-width;
-    margin: 0 auto;
   }
 
   .page-footer__wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .page-footer__hashtag {
+    margin-left: 120px;
+  }
+
+  .page-footer__social {
+    margin-left: 269px;
+  }
+
+  .page-footer__copyright {
+    margin-left: 274px;
+  }
+
+  .page-footer--photo {
+    padding-top: 108px;
   }
 }
