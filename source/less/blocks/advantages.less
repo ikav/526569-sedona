@@ -141,18 +141,14 @@
   background-position: center 0; 
 }
 
-/* Задаем картинку для ретины в мобильной версии */
-@media (min-width: @mobile-width) {
+/* Задаем картинку города и моста для ретины в мобильной версии */
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
   .advantages__city {
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-city-mobile@2x.jpg");
-    }
+    background-image: url("../img/main-city-mobile@2x.jpg");
   }
 
   .advantages__bridge {
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-bridge-mobile@2x.jpg");
-    }
+    background-image: url("../img/main-bridge-mobile@2x.jpg");
   }
 }
 

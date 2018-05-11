@@ -52,7 +52,21 @@
         <ul class="photogalary__list">
           <li class="photogalary__item">
             <figure class="figure">
-              <img class="figure__img figure__img--foreign" src="/img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
+              <picture>
+                <source media="(min-width: 1200px)" 
+                  srcset="img/photo-sunset-desktop@1x.jpg 1x,
+                          img/photo-sunset-desktop@2x.jpg 2x"
+                >
+                <source media="(min-width: 768px)" 
+                  srcset="img/photo-sunset-tablet@1x.jpg 1x,
+                          img/photo-sunset-tablet@2x.jpg 2x"
+                >
+                <img class="figure__img figure__img--foreign" 
+                  src="img/photo-sunset-mobile@1x.jpg" 
+                  srcset="img/photo-sunset-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Неродные просторы"
+                >
+              </picture>              
               <figcaption class="figure__capture">
                 <div class="figure__text">
                   <p class="figure__title">Неродные просторы</p>
@@ -67,7 +81,21 @@
           </li>
           <li class="photogalary__item">
             <figure class="figure">
-              <img class="figure__img" src="/img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
+              <picture>
+                <source media="(min-width: 1200px)" 
+                  srcset="img/photo-cactus-desktop@1x.jpg 1x,
+                          img/photo-cactus-desktop@2x.jpg 2x"
+                >
+                <source media="(min-width: 768px)" 
+                  srcset="img/photo-cactus-tablet@1x.jpg 1x,
+                          img/photo-cactus-tablet@2x.jpg 2x"
+                >
+                <img class="figure__img" 
+                  src="img/photo-cactus-mobile@1x.jpg" 
+                  srcset="img/photo-cactus-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Местная растительность"
+                >
+              </picture>  
               <figcaption class="figure__capture">
                 <p class="figure__title">Местная растительность</p>
                 <p class="figure__author">Автор фото: Сергей</p>
@@ -78,7 +106,21 @@
           </li>
           <li class="photogalary__item">
             <figure class="figure">
-              <img class="figure__img" src="/img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
+              <picture>
+                <source media="(min-width: 1200px)" 
+                  srcset="img/photo-roads-desktop@1x.jpg 1x,
+                          img/photo-roads-desktop@2x.jpg 2x"
+                >
+                <source media="(min-width: 768px)" 
+                  srcset="img/photo-roads-tablet@1x.jpg 1x,
+                          img/photo-roads-tablet@2x.jpg 2x"
+                >
+                <img class="figure__img" 
+                  src="img/photo-roads-mobile@1x.jpg" 
+                  srcset="img/photo-roads-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Дорога на север"
+                >
+              </picture>
               <figcaption class="figure__capture">
                 <p class="figure__title">Дорога на север</p>
                 <p class="figure__author">Автор фото: Петр</p>
@@ -89,7 +131,21 @@
           </li>
           <li class="photogalary__item">
             <figure class="figure">
-              <img class="figure__img" src="/img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
+              <picture>
+                <source media="(min-width: 1200px)" 
+                  srcset="img/photo-bridge-desktop@1x.jpg 1x,
+                          img/photo-bridge-desktop@2x.jpg 2x"
+                >
+                <source media="(min-width: 768px)" 
+                  srcset="img/photo-bridge-tablet@1x.jpg 1x,
+                          img/photo-bridge-tablet@2x.jpg 2x"
+                >
+                <img class="figure__img" 
+                  src="img/photo-bridge-mobile@1x.jpg" 
+                  srcset="img/photo-bridge-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Мост Дьявола"
+                >
+              </picture>
               <figcaption class="figure__capture">
                 <p class="figure__title">Мост дьявола</p>
                 <p class="figure__author">Автор фото: Антон</p>

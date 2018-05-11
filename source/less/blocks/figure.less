@@ -84,17 +84,18 @@
 
   .figure__capture {
     position: relative;
+    margin-top: -4px; //Это какой-то хак. Плохо :(   
     background-color: @background-add;
   }
 
   .figure__title {
     padding-top: 15px;
-    padding-left: 20px;
+    padding-left: 20px;   
   }
 
   .figure__author {
     .indents-zero();
-    padding-bottom: 15px;
+    padding-bottom: 12px;
     padding-left: 20px;
   }
 
@@ -135,12 +136,6 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
-  .figure {
-    background: rgba(54, 194, 89, 0.2);
-    box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
-    z-index: 1000;
-  }
-
   .figure__img {
     width: 400px;
     height: 268px;
