@@ -194,7 +194,7 @@
 
   .page-header__img {
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-position: center 0; //выровнять как требуется по макету
+    /* background-position: center 0; */ //выровнять как требуется по макету
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -214,6 +214,9 @@
   .page-header__img--inner {
     width: @desktop-width;
     height: 298px;
+    background-size: cover;
+    background-position-x: 0;
+    background-position-y: -220px;
   }
 
   .page-header__img--inner::after {
