@@ -29,25 +29,16 @@
 
 .figure__like-link {
   position: relative;
+  text-decoration: none; //уберем подчеркивание
 }
 
-.figure__like-link::before {
-  content: "";
-
-  position: absolute;
-  top: -2px;
-  left: 0;
-  width: 22px;
-  height: 20px;
-
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 0;
+.figure__like-icon {
+  fill: #b2b2b2;
 }
 
 .figure__likes-number {
-  margin-left: 37px;
+  position: absolute;
+  margin-left: 15px;
   font-size: 14px;
   line-height: 24px;
 }
@@ -86,8 +77,8 @@
   }
 
   .figure__title {
-    padding-top: 16px;
-    padding-left: 20px;   
+    padding-top: 15px;
+    padding-left: 21px;   
   }
 
   .figure__author {
@@ -106,12 +97,8 @@
   .figure__like-link {
     position: absolute;
     .indents-zero();
-    top: 30px;
-    left: 190px;
-  }
-
-  .figure__like-link::before {
-    left: 50px;
+    top: 28px;
+    left: 240px;
   }
 
   .figure__likes--first .figure__likes-number {
@@ -124,8 +111,8 @@
   .figure__likes--first .figure__like-link {
     position: absolute;
     .indents-zero();
-    top: 30px;
-    left: 515px;
+    top: 28px;
+    left: 565px;
   }
 }
 
@@ -160,17 +147,18 @@
     padding-left: 21px;
   }
 
+  .figure__like-icon {
+    fill: @text-color-link;
+  }
+
   .figure__likes-number {
     left: 348px;
   }
 
   .figure__like-link {
-    left: 265px;
+    left: 316px;
   }
 
-  .figure__like-link::before {
-    background-image: url("../img/icon-like-desktop.svg");
-  }
 
   .figure__likes--first .figure__likes-number {
     left: 1148px;
@@ -178,6 +166,6 @@
 
   /* Временно. С графикой нужно будет передалать*/
   .figure__likes--first .figure__like-link {
-    left: 1065px;
+    left: 1116px;
   }
 }
