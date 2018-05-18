@@ -124,32 +124,15 @@
 }
 
 .advantages__city {
+  .indents-zero();
   width: 320px;
   height: 260px;
-  background-image: url("../img/main-city-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 0; 
 }
 
 .advantages__bridge {
+  .indents-zero();
   width: 320px;
   height: 260px;
-  background-image: url("../img/main-bridge-mobile@1x.jpg");
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-position: center 0; 
-}
-
-/* Задаем картинку города и моста для ретины в мобильной версии */
-@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  .advantages__city {
-    background-image: url("../img/main-city-mobile@2x.jpg");
-  }
-
-  .advantages__bridge {
-    background-image: url("../img/main-bridge-mobile@2x.jpg");
-  }
 }
 
 /***********************************************/
@@ -168,22 +151,12 @@
   .advantages__city {
     width: 512px;
     height: 256px;
-    background-image: url("../img/main-city-tablet@1x.jpg"); 
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-city-tablet@2x.jpg");
-    }
   }
 
   .advantages__bridge {
     width: 512px;
     height: 256px;
     order: -1;
-    background-image: url("../img/main-bridge-tablet@1x.jpg");
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-bridge-tablet@2x.jpg");
-    }
   }
 
   .advantages__item--first,
@@ -252,27 +225,27 @@
     width: 400px;
   }
 
-  .advantages__city {
-    width: 800px;
-    background-image: url("../img/main-city-desktop@1x.jpg");
-    background-position-x: 0;
-    background-position-y: -70px;
+  .advantages__item--first {
+    height: 256px;
+  }
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-city-desktop@2x.jpg");
-    }
+  .advantages__city {
+    overflow: hidden;
+    width: 800px;
+  }
+
+  .advantages__img-city {
+    margin-top: -70px;
   }
 
   .advantages__bridge {
+    overflow: hidden;
     width: 800px;
     order: -1;
-    background-image: url("../img/main-bridge-desktop@1x.jpg");
-    background-position-x: 0;
-    background-position-y: -78px;
+  }
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-bridge-desktop@2x.jpg");
-    }
+  .advantages__img-bridge {
+    margin-top: -78px;
   }
 
   .advantages__item .advantages__title {
