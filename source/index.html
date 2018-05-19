@@ -94,7 +94,35 @@
                 <p class="advantages__number">— №1 —</p>
                 <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
-              <div class="advantages__city"></div>
+              <figure class="advantages__city">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" 
+                    srcset="img/main-city-desktop@1x.webp 1x,
+                            img/main-city-desktop@2x.webp 2x"
+                  >
+                  <source type="image/webp" media="(min-width: 768px)" 
+                    srcset="img/main-city-tablet@1x.webp 1x,
+                            img/main-city-tablet@2x.webp 2x"
+                  >
+                  <source type="image/webp" 
+                    srcset="img/main-city-mobile@1x.webp 1x,
+                            img/main-city-mobile@2x.webp 2x"
+                  >                
+                  <source media="(min-width: 1200px)" 
+                    srcset="img/main-city-desktop@1x.jpg 1x,
+                            img/main-city-desktop@2x.jpg 2x"
+                  >
+                  <source media="(min-width: 768px)" 
+                    srcset="img/main-city-tablet@1x.jpg 1x,
+                            img/main-city-tablet@2x.jpg 2x"
+                  >
+                  <img class="advantages__img-city"
+                    src="img/main-city-mobile@1x.jpg" 
+                    srcset="img/main-city-mobile@2x.jpg 2x"
+                    width="800" height="256" alt="Седона - настоящий городок"
+                  >
+                </picture>              
+              </figure>
             </li>
           </ul>
           <section class="recommendations">
@@ -129,11 +157,39 @@
           <ul class="advantages__list advantages__list--second">
             <li class="advantages__item advantages__item--second">
               <div class="advantages__text">
-                <h3 class="advantages__title">Там есть мост дьявола</h3>
+                <h3 class="advantages__title">Там есть Мост Дьявола</h3>
                 <p class="advantages__number">— №2 —</p>
                 <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <div class="advantages__bridge"></div>
+              <figure class="advantages__bridge">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" 
+                    srcset="img/main-bridge-desktop@1x.webp 1x,
+                            img/main-bridge-desktop@2x.webp 2x"
+                  >
+                  <source type="image/webp" media="(min-width: 768px)" 
+                    srcset="img/main-bridge-tablet@1x.webp 1x,
+                            img/main-bridge-tablet@2x.webp 2x"
+                  >
+                  <source type="image/webp" 
+                    srcset="img/main-bridge-mobile@1x.webp 1x,
+                            img/main-bridge-mobile@2x.webp 2x"
+                  >                
+                  <source media="(min-width: 1200px)" 
+                    srcset="img/main-bridge-desktop@1x.jpg 1x,
+                            img/main-bridge-desktop@2x.jpg 2x"
+                  >
+                  <source media="(min-width: 768px)" 
+                    srcset="img/main-bridge-tablet@1x.jpg 1x,
+                            img/main-bridge-tablet@2x.jpg 2x"
+                  >
+                  <img class="advantages__img-bridge"
+                    src="img/main-bridge-mobile@1x.jpg" 
+                    srcset="img/main-bridge-mobile@2x.jpg 2x"
+                    width="800" height="260" alt="Мост Дьявола"
+                  >
+                </picture>              
+              </figure>
             </li>
           </ul>
           <ul class="advantages__list advantages__list--third">
