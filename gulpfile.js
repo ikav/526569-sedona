@@ -44,14 +44,14 @@ gulp.task("images", function() {
 
 // Добавляем изображения в формате webp
 gulp.task("webp", function() {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src(["source/img/**/main-*.{png,jpg}", "source/img/**/photo-*.{png,jpg}", "source/img/**/video-*.{png,jpg}"])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 
 // Собираем изображения в спрайт
 gulp.task("sprite", function() {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src(["source/img/**/icon-*.svg", "source/img/**/logo-htmlacademy.svg"])
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -77,7 +77,6 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
     "source/js/**"
   ], {
     base: "source"
@@ -88,18 +87,35 @@ gulp.task("copy", function() {
 // Сервер разработки
 gulp.task("serve", function() {
   server.init({
-    server: "build/",
+    server: "build/"
+    /* ,
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false */
   });
 
+  /**************************/
+  /* СЛЕДИМ ЗА ИЗМЕНЕНИЯМИ  */
+  /**************************/
+  // Следим за изменениями less-файлов
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html", ["html"]);
-  //gulp.watch("source/*.html").on("change", server.reload);
+  // Следим за изменениями иконок и логотипов в спрайте
+  gulp.watch(["source/img/**/icon-*.svg", "source/img/**/logo-htmlacademy.svg"], ["changeSprite"]).on("change", server.reload);
+  // Следим за изменениями html-страничек
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("build/*.html").on("change", server.reload);
 });
 
+// Частично пересобираем, если меняем спрайт
+gulp.task("changeSprite", function(done) {
+  run(
+    "sprite",
+    "style",
+    "html",
+    done
+  );
+});
 
 // Запуск сборки. Последовательно каждую команду (run-sequence)
 gulp.task("build", function(done){
@@ -107,6 +123,8 @@ gulp.task("build", function(done){
     "clean",
     "copy",
     "style",
+    "images",
+    "webp",
     "sprite",
     "html",
     done
