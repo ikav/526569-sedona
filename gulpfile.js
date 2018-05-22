@@ -1,7 +1,9 @@
 "use strict";
 
 var gulp = require("gulp");
-var minify = require("gulp-csso");
+var minifycss = require("gulp-csso");
+var minifyhtml = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -25,7 +27,7 @@ gulp.task("style", function() {
       autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
-    .pipe(minify())
+    .pipe(minifycss())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -59,13 +61,23 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-// posthtml для вставки спрайта в разметку html-страниц
+// posthtml для вставки спрайта в разметку html-страниц, а также минификация кода html-страницы
 gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
     ]))
+    .pipe(minifyhtml({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
+});
+
+// Минификация JS-кода
+gulp.task("jsmin", function() {
+  gulp.src("source/js/*.js")
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
 });
 
 // Удаление файлов в папке build
@@ -88,11 +100,6 @@ gulp.task("copy", function() {
 gulp.task("serve", function() {
   server.init({
     server: "build/"
-    /* ,
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false */
   });
 
   /**************************/
@@ -127,6 +134,7 @@ gulp.task("build", function(done){
     "webp",
     "sprite",
     "html",
+    "jsmin",
     done
   );
 });
