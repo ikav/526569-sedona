@@ -5,7 +5,8 @@
 }
 
 .contacts__title,
-.contacts__description {
+.contacts__description,
+.contacts__description-mobile {
   .indents-zero();
 }
 
@@ -17,12 +18,19 @@
   color: @text-color-title;
 }
 
-.contacts__description {
+/* Для мобильной версии одна надпись*/
+.contacts__description-mobile {
+  display: block;
   .padding-for-mobile-text();
   padding-bottom: 36px;
   font-size: 14px;
   line-height: 24px;
   color: @text-color-description;
+}
+
+/* Для планшетной и десктом версии другая надпись, здесь скрыта*/
+.contacts__description {
+  display: none;
 }
 
 .contacts__link {
