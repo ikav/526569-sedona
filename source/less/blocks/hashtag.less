@@ -24,4 +24,20 @@
   .hashtag {
     .indents-zero();
   }
+
+  .hashtag__link--index {
+    margin-left: 2px;
+    margin-right: -8px;
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  /* сброс отступов слева и права. Они не нужны в десктопе */
+  .hashtag__link--index {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

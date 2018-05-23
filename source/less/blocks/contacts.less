@@ -18,9 +18,9 @@
   color: @text-color-title;
 }
 
-/* Для мобильной версии одна надпись*/
-.contacts__description-mobile {
-  display: block;
+/* Для мобильной версии одна надпись, для планшетной и десктопной - другая */
+.contacts__description-mobile,
+.contacts__description {
   .padding-for-mobile-text();
   padding-bottom: 36px;
   font-size: 14px;
@@ -28,7 +28,12 @@
   color: @text-color-description;
 }
 
-/* Для планшетной и десктом версии другая надпись, здесь скрыта*/
+/* Только мобильную надпись показываем */
+.contacts__description-mobile {
+  display: block;
+}
+
+/* Плантетная и десктопная надпись не видна */
 .contacts__description {
   display: none;
 }
@@ -51,14 +56,19 @@
 
   .contacts__title {
     padding-top: 52px;
-    padding-bottom: 26px;
+    padding-bottom: 28px;
     font-size: 30px;
     line-height: 35px;
   }
 
+  .contacts__description-mobile {
+    display: none;
+  }
+
   .contacts__description {
+    display: block;
     .padding-for-tablet-text();
-    padding-bottom: 44px;
+    padding-bottom: 42px;
   }
 
   .contacts__link {
@@ -74,6 +84,10 @@
 
     /* Убрать. Временные обводки. */
     min-height: 678px;
+  }
+
+  .contacts__title {
+    padding-top: 50px;
   }
 
   .contacts__description {
