@@ -2,11 +2,6 @@
 .contacts {
   text-transform: uppercase;
   text-align: center;
-
-  /* Убрать. Временные обводки. */
-  min-height: 600px;
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
 }
 
 .contacts__title,
@@ -32,6 +27,8 @@
 
 .contacts__link {
   text-decoration: none;
+  width: 280px;
+  margin: 0 auto;
 }
 
 /***********************************************/
@@ -45,7 +42,7 @@
   }
 
   .contacts__title {
-    padding-top: 50px;
+    padding-top: 52px;
     padding-bottom: 26px;
     font-size: 30px;
     line-height: 35px;
@@ -54,6 +51,10 @@
   .contacts__description {
     .padding-for-tablet-text();
     padding-bottom: 44px;
+  }
+
+  .contacts__link {
+    width: 458px;
   }
 }
 
