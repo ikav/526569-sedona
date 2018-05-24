@@ -49,7 +49,7 @@
       </div>
     </header>
 
-    <main class="page-main page-main--inner">
+    <main class="page-main page-main--photo">
 
       <h1 class="page-main__title page-main__title--inner">Фото и видео</h1>
 
@@ -234,7 +234,49 @@
       <section class="videopresentation">
         <h2 class="videopresentation__title">Все еще сомневаетесь?</h2>
         <p class="videopresentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <!-- Здесь будет видеопрезентация -->
+        <div class="videopresentation__wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" 
+            srcset="img/video-desktop@1x.webp 1x,
+                    img/video-desktop@2x.webp 2x"
+            >
+            <source type="image/webp" media="(min-width: 768px)" 
+              srcset="imgvideo-tablet@1x.webp 1x,
+                      img/video-tablet@2x.webp 2x"
+            >
+            <source type="image/webp" 
+              srcset="img/video-mobile@1x.webp 1x,
+                      img/video-mobile@2x.webp 2x"
+            >                
+            <source media="(min-width: 1200px)" 
+              srcset="img/video-desktop@1x.jpg 1x,
+                      img/video-desktop@2x.jpg 2x"
+            >
+            <source media="(min-width: 768px)" 
+              srcset="img/video-tablet@1x.jpg 1x,
+                      img/video-tablet@2x.jpg 2x"
+            >
+            <img class="videopresentation__img"
+              src="img/video-mobile@1x.jpg" 
+              srcset="img/video-mobile@2x.jpg 2x"
+              width="320" height="200" alt="Видеопрезентация"
+            >
+          </picture>
+          <div class="videopresentation__controls">            
+            <div class="videopresentation__controls-elements">
+              <svg class="videopresentation__replay videopresentation__button" width="16" height="20">
+                <use xlink:href="#icon-video-replay"></use>
+              </svg>
+              <div class="range-toggle"></div>
+              <svg class="videopresentation__subtitles videopresentation__button" width="32" height="20">
+                <use xlink:href="#icon-video-subtitles"></use>
+              </svg>
+              <svg class="videopresentation__fullscreen videopresentation__button" width="20" height="20">
+                <use xlink:href="#icon-video-fullscreen"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 

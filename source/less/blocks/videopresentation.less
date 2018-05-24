@@ -1,28 +1,45 @@
 .videopresentation {
 
   /* Временно для верстки */
-  min-height: 452px;
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+  /* min-height: 452px; */
 }
 
 .videopresentation__title {
   .indents-zero();
   .padding-for-mobile-text();
   padding-top: 28px;
-  padding-bottom: 12px;
+  padding-bottom: 14px;
   font-size: 18px;
   line-height: 26px;
 }
 
 .videopresentation__description {
-  padding-left: 21px;
-  padding-right: 21px;
-
-  padding-bottom: 40px;
+  .padding-for-mobile-text();
+  padding-bottom: 20px;
   font-size: 14px;
   line-height: 24px;
 }
+
+.videopresentation__img {
+  width: 320px;
+  height: 200px;
+}
+
+.videopresentation__controls-elements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 280px;
+  height: 66px;
+  margin: 0 auto;
+  margin-top: -4px;
+  background-color: #f2f2f2;
+}
+
+.videopresentation__button {
+  cursor: pointer;
+}
+
 
 /***********************************************/
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
