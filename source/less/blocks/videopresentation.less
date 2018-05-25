@@ -25,18 +25,16 @@
 }
 
 /* Для мобильной версии одна верстка */
-.videopresentation__bar-control-mobile,
 .videopresentation__scale-mobile {
   display: block;
 }
 
 /* Для планшетной и десктопной другая версия верстки. Здесь скрыта */
-.videopresentation__bar-control,
 .videopresentation__scale {
   display: none;
 }
 
-.videopresentation__bar-control-mobile {
+.videopresentation__scale-mobile {
   position: relative;
   width: 100%;
   height: 45px;
@@ -45,17 +43,7 @@
   opacity: 0.6;
 }
 
-.videopresentation__scale-mobile {
-  position: absolute;
-  top: 20px;
-  left: 22px;
-  width: 236px;
-  height: 4px;
-  background-color: @background-page;
-  opacity: 0.2;
-}
-
-.videopresentation__bar-control-mobile::before {
+.videopresentation__scale-mobile::before {
   content: "";
   position: absolute;
   top: 18px;
@@ -63,7 +51,18 @@
   width: 9px;
   height: 9px;
   background-color: @background-page;
-  border-radius: 50%;
+  border-radius: 50%;  
+}
+
+.videopresentation__scale-mobile::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  width: 236px;
+  height: 4px;
+  background-color: @background-page;
+  opacity: 0.2;
 }
 
 .videopresentation__controls-elements {
@@ -79,44 +78,33 @@
   cursor: pointer;
 }
 
-.videopresentation__replay {
-  margin-left: 25px;
+.videopresentation__replay,
+.videopresentation__subtitles,
+.videopresentation__fullscreen {
   fill: #000000;
   opacity: 0.6;
 }
 
-.videopresentation__replay:hover {
-  opacity: 1;
-}
-
-.videopresentation__replay:active {
-  opacity: 0.3;
+.videopresentation__replay {
+  margin-left: 25px;
 }
 
 .videopresentation__subtitles {
   margin-left: 133px;
-  fill: #000000;
-  opacity: 0.6;
-}
-
-.videopresentation__subtitles:hover {
-  opacity: 1;
-}
-
-.videopresentation__subtitles:active {
-  opacity: 0.3;
 }
 
 .videopresentation__fullscreen {
   margin-left: 31px;
-  fill: #000000;
-  opacity: 0.6;
 }
 
+.videopresentation__replay:hover,
+.videopresentation__subtitles:hover,
 .videopresentation__fullscreen:hover {
   opacity: 1;
 }
 
+.videopresentation__replay:active,
+.videopresentation__subtitles:active,
 .videopresentation__fullscreen:active {
   opacity: 0.3;
 }
