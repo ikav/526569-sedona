@@ -113,11 +113,6 @@
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @tablet-width) {
-  .videopresentation {
-    /* Временно для верстки */
-    min-height: 742px;
-  }
-
   .videopresentation__title {
     .indents-zero();
     padding-top: 64px;
@@ -128,11 +123,98 @@
   }
 
   .videopresentation__description {
-    .padding-for-tablet-text();
-    padding-bottom: 70px;
+    /* .padding-for-tablet-text(); */
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-bottom: 60px;
     font-size: 14px;
     line-height: 24px;
   }
+
+  .videopresentation__img {
+    width: 648px;
+    height: 500px;
+  }
+
+  .videopresentation__controls {
+    width: 648px;
+  }
+
+  /* Для мобильной версии одна верстка. Здесь скрыта */
+  .videopresentation__scale-mobile {
+    display: none;
+  }
+
+  /* Для планшетной и десктопной другая версия верстки. */
+  .videopresentation__scale {
+    display: block;
+  }
+
+  .videopresentation__scale {
+    position: relative;
+  }
+  
+  .videopresentation__scale::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 155px;
+    width: 9px;
+    height: 9px;
+    background-color: @background-page;
+    border-radius: 50%;  
+  }
+  
+  .videopresentation__scale::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 42px;
+    width: 390px;
+    height: 4px;
+    background-color: @background-page;
+    opacity: 0.2;
+  }
+
+  .videopresentation__controls-elements {
+    margin-top: -98px;
+    height: 94px;
+    background-color: #000000;
+    opacity: 0.6;
+  }
+
+  .videopresentation__replay,
+  .videopresentation__subtitles,
+  .videopresentation__fullscreen {
+    fill: #ffffff;
+    opacity: 1;
+  }
+
+  .videopresentation__replay {
+    margin-left: 36px;
+  }
+  
+  .videopresentation__subtitles {
+    margin-left: 472px;
+  }
+  
+  .videopresentation__fullscreen {
+    margin-left: 32px;
+  }
+
+  .videopresentation__replay:hover,
+  .videopresentation__subtitles:hover,
+  .videopresentation__fullscreen:hover {
+    opacity: 0.6;
+  }
+
+  /* Нужно добавить этот код, иначе active не будет срабатывать (перебъется hover)*/
+  .videopresentation__replay:active,
+  .videopresentation__subtitles:active,
+  .videopresentation__fullscreen:active {
+    opacity: 0.3;
+  }
+
 }
 
 /***********************************************/
