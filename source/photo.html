@@ -262,12 +262,20 @@
               width="320" height="200" alt="Видеопрезентация"
             >
           </picture>
-          <div class="videopresentation__controls">            
+          <div class="videopresentation__controls">           
+            <!-- Шкала с ползунком для мобильной версии -->
+            <div class="videopresentation__bar-control-mobile">
+              <div class="videopresentation__scale-mobile"></div>
+            </div> 
+            <!-- Элементы управления -->
             <div class="videopresentation__controls-elements">
               <svg class="videopresentation__replay videopresentation__button" width="16" height="20">
                 <use xlink:href="#icon-video-replay"></use>
               </svg>
-              <div class="range-toggle"></div>
+              <!-- Шкала с ползунком для планшетной и десктопной версии -->
+              <div class="videopresentation__bar-control">
+                <div class="videopresentation__scale"></div>
+              </div>               
               <svg class="videopresentation__subtitles videopresentation__button" width="32" height="20">
                 <use xlink:href="#icon-video-subtitles"></use>
               </svg>
