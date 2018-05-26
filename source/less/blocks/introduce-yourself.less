@@ -1,0 +1,55 @@
+.introduce-yourself {
+  .indents-zero();
+  border: none;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 24px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .indents-zero();
+    margin-bottom: 20px;
+  }
+
+  &__legend {
+    margin-bottom: 22px;    
+    font-weight: bold;
+    text-align: center;
+
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  &__field {
+    width: 192px;
+    height: 58px;
+    font-weight: bold;
+    background-color: @bg-field-normal;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  &__first-name {
+    width: 230px;
+  }
+
+  &__field::placeholder {
+    padding-top: 0px;
+    padding-left: 22px;
+  }
+
+  &__field:hover {
+    background-color: @bg-field-hover;
+  }
+
+  &__field:focus {
+    background-color: transparent;
+    border: 2px solid @bg-field-border;
+    outline: none;
+  }
+}

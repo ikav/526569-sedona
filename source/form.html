@@ -54,22 +54,28 @@
       <section class="comments">
         <h2 class="comments__title">Оставьте свой отзыв</h2>
         <p class="comments__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <form class="form" method="get" action="https://echo.htmlacademy.ru">
+        <form class="form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="introduce-yourself">
             <legend class="introduce-yourself__legend">Представьтесь:</legend>
-            <label for="introduce-yourself__first-name">Имя*:</label>
-            <input class="introduce-yourself__first-name" type="text" placeholder="Петр" id="introduce-yourself__first-name">
-            <label for="introduce-yourself__last-name">Фамилия*:</label>
-            <input class="introduce-yourself__last-name" type="text" placeholder="Иванов" id="introduce-yourself__last-name">
-            <label for="introduce-yourself__middle-name">Отчество:</label>
-            <input class="introduce-yourself__middle-name" type="text" placeholder="Александрович" id="introduce-yourself__middle-name">
+            <p class="introduce-yourself__wrapper">
+              <label class="introduce-yourself__label" for="introduce-yourself__first-name">Имя*:</label>
+              <input class="introduce-yourself__field introduce-yourself__first-name" type="text" placeholder="Петр" id="introduce-yourself__first-name">
+            </p>
+            <p class="introduce-yourself__wrapper">
+              <label class="introduce-yourself__label" for="introduce-yourself__last-name">Фамилия*:</label>
+              <input class="introduce-yourself__field introduce-yourself__last-name" type="text" placeholder="Иванов" id="introduce-yourself__last-name">
+            </p>
+            <p class="introduce-yourself__wrapper">
+              <label class="introduce-yourself__label" for="introduce-yourself__middle-name">Отчество:</label>
+              <input class="introduce-yourself__field introduce-yourself__middle-name" type="text" placeholder="Александрович" id="introduce-yourself__middle-name">
+            </p>
           </fieldset>
           <fieldset class="contact-info">
             <legend class="contact-info__legend">Контактная информация:</legend>
-            <label for="contact-info__tel">Контактный телефон*:</label>
-            <input class="contact-info__tel" type="text" placeholder="Введите телефон" id="contact-info__tel">
-            <label for="contact-info__email">Электронная почта*:</label>
-            <input class="contact-info__email" type="text" placeholder="Введите e-mail" id="contact-info__email">
+            <label class="contact-info__label" for="contact-info__phone">Контактный телефон*:</label>
+            <input class="contact-info__field contact-info__phone" type="text" placeholder="Введите телефон" id="contact-info__phone">
+            <label class="contact-info__label" for="contact-info__email">Электронная почта*:</label>
+            <input class="contact-info__field contact-info__email" type="text" placeholder="Введите e-mail" id="contact-info__email">
           </fieldset>
           <fieldset class="impression">
             <legend class="impression__legend">Ваше общее впечатление:</legend>
