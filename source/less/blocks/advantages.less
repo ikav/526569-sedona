@@ -123,6 +123,22 @@
   padding-bottom: 40px;
 }
 
+.advantages__item--fourth .advantages__title,
+.advantages__item--fifth .advantages__title {
+  position: relative;
+}
+
+.advantages__item--fourth .advantages__title::before,
+.advantages__item--fifth .advantages__title::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 20px;
+  width: 280px;
+  height: 1px;
+  background-color: @line-color;
+}
+
 .advantages__city {
   .indents-zero();
   width: 320px;
@@ -173,6 +189,11 @@
     display: flex;
     justify-content: space-between;
     min-height: 256px; //временно, для черновой верстки
+  }
+
+  .advantages__item--fourth .advantages__title::before,
+  .advantages__item--fifth .advantages__title::before {
+    display: none;
   }
 
   .advantages__item--first .advantages__title,
