@@ -9,6 +9,11 @@
   background-repeat: no-repeat;
 }
 
+.map__google-map {
+  width: 320px;
+  height: 350px;
+}
+
 /* Задаем картинку для ретины в мобильной версии */
 @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
   .map {
@@ -30,6 +35,10 @@
         background-image: url("../img/bg-map-tablet@2x.jpg");
     }
   }
+
+  .map__google-map {
+    width: 768px;
+  }
 }
 
 /***********************************************/
@@ -44,5 +53,9 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/bg-map-desktop@2x.jpg");
     }
+  }
+
+  .map__google-map {
+    width: 1200px;
   }
 }
