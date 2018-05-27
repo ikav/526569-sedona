@@ -20,33 +20,24 @@
 }
 
 .videopresentation__controls {
+  position: relative;
   width: 280px;
   margin: 0 auto;
 }
 
-/* Для мобильной версии одна верстка */
-.videopresentation__scale-mobile {
-  display: block;
-}
-
-/* Для планшетной и десктопной другая версия верстки. Здесь скрыта */
 .videopresentation__scale {
-  display: none;
-}
-
-.videopresentation__scale-mobile {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 45px;
-  margin-top: -49px;  
+  margin-top: -54px;  
   background-color: #000000;
   opacity: 0.6;
 }
 
-.videopresentation__scale-mobile::before {
+.videopresentation__scale::before {
   content: "";
   position: absolute;
-  top: 18px;
+  top: 17px;
   left: 58px;
   width: 9px;
   height: 9px;
@@ -54,7 +45,7 @@
   border-radius: 50%;  
 }
 
-.videopresentation__scale-mobile::after {
+.videopresentation__scale::after {
   content: "";
   position: absolute;
   top: 20px;
@@ -69,6 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-top: -5px;
   width: 100%;
   height: 66px;
   background-color: #f2f2f2;
@@ -139,40 +131,21 @@
     width: 648px;
   }
 
-  /* Для мобильной версии одна верстка. Здесь скрыта */
-  .videopresentation__scale-mobile {
-    display: none;
-  }
-
-  /* Для планшетной и десктопной другая версия верстки. */
   .videopresentation__scale {
-    display: block;
-  }
-
-  .videopresentation__scale {
-    position: relative;
+    .indents-zero();
+    width: 0;
+    height: 0;
   }
   
   .videopresentation__scale::before {
-    content: "";
-    position: absolute;
     top: -4px;
-    left: 155px;
-    width: 9px;
-    height: 9px;
-    background-color: @background-page;
-    border-radius: 50%;  
+    left: 207px;
   }
   
   .videopresentation__scale::after {
-    content: "";
-    position: absolute;
     top: -2px;
-    left: 42px;
-    width: 390px;
-    height: 4px;
-    background-color: @background-page;
-    opacity: 0.2;
+    left: 94px;
+    width: 388px;
   }
 
   .videopresentation__controls-elements {
@@ -244,9 +217,13 @@
     width: 800px;
   }
   
+  .videopresentation__scale::before {
+    left: 205px;
+  }
+
   .videopresentation__scale::after {
+    left: 92px;
     width: 540px;
-    height: 4px;
   }
 
   .videopresentation__replay {
@@ -260,5 +237,4 @@
   .videopresentation__fullscreen {
     margin-left: 32px;
   }
-
 }
