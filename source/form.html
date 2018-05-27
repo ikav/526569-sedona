@@ -72,10 +72,14 @@
           </fieldset>
           <fieldset class="contact-info">
             <legend class="contact-info__legend">Контактная информация:</legend>
-            <label class="contact-info__label" for="contact-info__phone">Контактный телефон*:</label>
-            <input class="contact-info__field contact-info__phone" type="tel" placeholder="Введите телефон" id="contact-info__phone" required>
-            <label class="contact-info__label" for="contact-info__email">Электронная почта*:</label>
-            <input class="contact-info__field contact-info__email" type="email" placeholder="Введите e-mail" id="contact-info__email" required>
+            <div class="contact-info__wrapper contact-info__wrapper-phone">
+              <label class="contact-info__label" for="contact-info__phone">Контактный телефон*:</label>
+              <input class="contact-info__field contact-info__phone" type="tel" placeholder="Введите телефон" id="contact-info__phone" required>
+            </div>
+            <div class="contact-info__wrapper contact-info__wrapper-email">
+              <label class="contact-info__label" for="contact-info__email">Электронная почта*:</label>
+              <input class="contact-info__field contact-info__email" type="email" placeholder="Введите e-mail" id="contact-info__email" required>
+            </div>
           </fieldset>
           <fieldset class="impression">
             <legend class="impression__legend">Ваше общее впечатление:</legend>
