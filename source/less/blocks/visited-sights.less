@@ -1,8 +1,69 @@
 .visited-sights {
+  position: relative;
   .indents-zero();
+  margin-bottom: 5px;
   border: none;
-}
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: left;
 
-.visited-sights__list {
-  list-style: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  }
+
+  &__list {
+    .indents-zero();
+    text-transform: none;
+    list-style: none;
+  }
+
+  &__legend {
+    margin-bottom: 30px;    
+    text-align: center;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    margin-left: 78px;
+    margin-bottom: 55px;
+  }
+
+  &__label::before {
+    content: "";
+
+    position: absolute;
+    top: -15px;
+    left: -78px;
+    width: 56px;
+    height: 56px;
+    background-color: @bg-field-normal;
+  }
+
+  &__input-checkbox:checked + &__label::after {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: -61px;
+    width: 24px;
+    height: 18px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__label:hover::before {
+    background-color: @bg-field-hover;
+  }
+
+  &__input-checkbox:checked + &__label:active::after {
+    opacity: 0.3;
+  }
 }

@@ -1,9 +1,20 @@
 .introduce-yourself {
+  position: relative;
   .indents-zero();
   border: none;
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  }
 
   &__wrapper {
     display: flex;
@@ -14,16 +25,28 @@
   }
 
   &__legend {
+    position: relative;
     margin-bottom: 22px;    
     font-weight: bold;
     text-align: center;
-
   }
+
+/*   &__legend::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -70px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  } */
 
   &__label {
     font-size: 14px;
     font-weight: normal;
   }
+
+
 
   &__field {
     width: 192px;
