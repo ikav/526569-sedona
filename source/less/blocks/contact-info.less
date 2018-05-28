@@ -97,3 +97,35 @@
     outline: none;
   }
 }
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .contact-info {
+    width: 100%;
+    order: 3;
+  
+    &::before {
+      display: none;
+    }
+
+    &__legend {
+      padding-top: 14px;
+      padding-bottom: 5px;
+      font-size: 21px;
+    }
+
+    &__wrapper-phone {
+      padding-bottom: 10px;
+    }
+
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+
+}

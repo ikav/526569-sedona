@@ -65,3 +65,43 @@
     outline: none;
   }
 }
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .introduce-yourself {
+    width: 266px;
+    order: 2;
+
+    &::before {
+      display: none;
+    }
+
+    &__legend {
+      margin-bottom: 57px;
+      font-size: 21px;
+      text-align: left;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__field {
+      width: 180px;
+    }
+  
+    &__first-name {
+      width: 216px;
+    }
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+
+}

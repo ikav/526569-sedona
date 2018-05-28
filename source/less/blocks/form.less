@@ -5,3 +5,50 @@
   border: 0;
   cursor: pointer;
 }
+
+.form__required-text {
+  display: none;
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 74px;
+  }
+
+  .form__required-text {
+    display: block;
+  }
+
+  .form__footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 44px;
+    width: 100%;
+    order: 6;
+  }
+
+  .form__comment-button {
+    margin-top: 0;
+    width: 324px;
+    order: 1;
+  }
+
+  .form__required-text {
+    font-size: 14px;
+    order: 2;
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+
+}

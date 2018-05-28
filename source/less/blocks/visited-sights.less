@@ -67,3 +67,41 @@
     opacity: 0.3;
   }
 }
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .visited-sights {
+    width: 100%;
+    order: 4;
+
+    &::before {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__legend {
+      padding-top: 6px;
+      padding-left: 140px;
+      padding-right: 140px;
+      font-size: 21px;
+    }
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .visited-sights {
+
+    &__list {
+      justify-content: space-between;
+    }
+  }
+}

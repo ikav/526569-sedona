@@ -68,3 +68,34 @@
     opacity: 0.3;
   }
 }
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .impression {
+    order: 1;
+  
+    &::before {
+      display: none;
+    }
+
+    &__legend {
+      margin-bottom: 74px;
+      font-size: 21px;
+      text-align: left;
+    }
+
+    &__label {
+      margin-left: 76px;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+
+}
