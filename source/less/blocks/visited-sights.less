@@ -77,7 +77,20 @@
     order: 4;
 
     &::before {
-      display: none;
+      top: 32px;
+      left: 0;
+      width: 126px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 32px;
+      right: 0;
+      width: 126px;
+      height: 1px;
+      background-color: @line-color;
     }
 
     &__list {

@@ -107,7 +107,20 @@
     order: 3;
   
     &::before {
-      display: none;
+      top: 27px;
+      left: 0;
+      width: 126px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      right: 0;
+      width: 126px;
+      height: 1px;
+      background-color: @line-color;
     }
 
     &__legend {
