@@ -29,10 +29,10 @@
 
   .comments__description {
     .padding-for-tablet-text();
+    margin-bottom: 0;    
     font-size: 14px;
     line-height: 24px;
     text-align: center;
-    margin-bottom: 0;
   }
 }
 
@@ -41,16 +41,16 @@
 /***********************************************/
 @media (min-width: @desktop-width) {
   .comments {
-    /* Временно для верстки. */
-    min-height: 1490px;
-  }
 
-  .comments__title {
-    padding-top: 107px;
-    .padding-for-desktop-text();
-  }
+    &__title {
+      padding-top: 108px;
+      padding-bottom: 14px;
+      .padding-for-desktop-text();
+    }
 
-  .comments__description {
-    .padding-for-desktop-text();
+    &__description {
+      .padding-for-desktop-text();
+      padding-bottom: 0px;
+    }
   }
 }

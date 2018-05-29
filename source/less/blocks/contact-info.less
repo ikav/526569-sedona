@@ -132,7 +132,6 @@
     &__wrapper-phone {
       padding-bottom: 10px;
     }
-
   }
 }
 
@@ -140,5 +139,71 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
+  .contact-info {
 
+    &::before {
+      top: 27px;
+      left: 122px;
+      width: 280px;
+    }
+
+    &::after {
+      top: 27px;
+      right: 120px;
+      width: 280px;
+    }
+
+    &__legend {
+      padding-top: 12px;
+      margin-bottom: 70px;
+    }
+
+    &__field {
+      margin-bottom: 0; 
+      width: 316px;
+    }
+
+    &__hidden-for-desktop {
+      display: none;
+    }
+
+    &__label {
+      .indents-zero();
+      margin-right: 16px;
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      .indents-zero(); 
+    }
+
+    &__wrapper::before {
+      top: 0px;
+      right: 0px;
+    }
+
+    &__wrapper-phone {
+      width: 402px;
+    } 
+
+    &__wrapper-email {
+      width: 480px;
+    }
+
+    &__wrapper-phone::after {
+      top: 20px;
+    }
+  
+    &__wrapper-email::after {
+      top: 20px;
+    }
+
+    &__wrapper-main {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 960px;
+    }
+  }
 }
