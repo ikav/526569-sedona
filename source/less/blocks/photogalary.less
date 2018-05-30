@@ -22,8 +22,19 @@
 }
 
 .photogalary__item {
+  position: relative;
   min-width: 280px;
   min-height: 280px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  }
 }
 
 /***********************************************/
@@ -40,6 +51,11 @@
     .padding-for-tablet-text();
     font-size: 14px;
     line-height: 24px;
+  }
+
+  /* Убрал разделительные полосы */
+  .photogalary__item::before {
+    display: none;
   }
 }
 

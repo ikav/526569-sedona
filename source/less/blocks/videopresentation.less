@@ -1,10 +1,21 @@
 .videopresentation__title {
+  position: relative;
   .indents-zero();
   .padding-for-mobile-text();
   padding-top: 28px;
   padding-bottom: 14px;
   font-size: 18px;
   line-height: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  }
 }
 
 .videopresentation__description {
@@ -119,6 +130,11 @@
     .padding-for-tablet-text();
     font-size: 30px;
     line-height: 35px;
+
+    /* Убрал разделительную полосу */
+    &::before {
+      display: none;
+    }
   }
 
   .videopresentation__description {
