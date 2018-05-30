@@ -87,5 +87,27 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
+  .emotions {
+    width: 960px;
+    margin: 0 auto;
 
+    &::before {
+      top: 38px;
+      left: 0px;
+      width: 280px;
+    }
+
+    &::after {
+      top: 38px;
+      right: 0px;
+      width: 280px;
+    }
+
+    &__label {
+      padding-top: 10px;
+      padding-bottom: 0px;
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+  }
 }

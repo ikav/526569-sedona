@@ -119,9 +119,36 @@
 /***********************************************/
 @media (min-width: @desktop-width) {
   .visited-sights {
+    width: 960px;
+    margin: 0 auto;
+
+    &::before {
+      top: 45px;
+      left: 0px;
+      width: 280px;
+    }
+
+    &::after {
+      top: 45px;
+      right: 0px;
+      width: 280px;
+    }
+
+    &__legend {
+      padding-top: 20px;
+      padding-bottom: 28px;
+      padding-left: 300px;
+      padding-right: 300px;
+    }
 
     &__list {
       justify-content: space-between;
+      .indents-zero();
+    }
+
+    &__item {
+      .indents-zero();
+      min-width: 0;
     }
   }
 }
