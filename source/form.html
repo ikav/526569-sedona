@@ -55,8 +55,8 @@
         <h2 class="comments__title">Оставьте свой отзыв</h2>
         <p class="comments__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="introduce-yourself">
-            <legend class="introduce-yourself__legend">Представьтесь:</legend>
+          <div class="introduce-yourself">
+            <div class="introduce-yourself__legend">Представьтесь:</div>
             <p class="introduce-yourself__wrapper">
               <label class="introduce-yourself__label" for="introduce-yourself__first-name">Имя*:</label>
               <input class="introduce-yourself__field introduce-yourself__first-name" type="text" placeholder="Петр" id="introduce-yourself__first-name" required>
@@ -69,9 +69,9 @@
               <label class="introduce-yourself__label" for="introduce-yourself__middle-name">Отчество:</label>
               <input class="introduce-yourself__field introduce-yourself__middle-name" type="text" placeholder="Александрович" id="introduce-yourself__middle-name">
             </p>
-          </fieldset>
-          <fieldset class="contact-info">
-            <legend class="contact-info__legend">Контактная информация:</legend>
+          </div>
+          <div class="contact-info">
+            <div class="contact-info__legend">Контактная информация:</div>
             <div class="contact-info__wrapper-main">
               <div class="contact-info__wrapper contact-info__wrapper-phone">
                 <label class="contact-info__label" for="contact-info__phone"><span class="contact-info__hidden-for-desktop">Контактный </span>телефон*:</label>
@@ -82,9 +82,9 @@
                 <input class="contact-info__field contact-info__email" type="email" placeholder="Введите e-mail" id="contact-info__email" required>
               </div>
             </div>
-          </fieldset>
-          <fieldset class="impression">
-            <legend class="impression__legend">Ваше общее впечатление:</legend>
+          </div>
+          <div class="impression">
+            <div class="impression__legend">Ваше общее впечатление:</div>
             <ul class="impression__list">
               <li class="impression__item">
                 <input class="visually-hidden impression__input-radio impression__input-positive" name="impression" type="radio" id="impression__positive" value="impression__positive" checked>
@@ -99,9 +99,9 @@
                 <label class="impression__label" for="impression__difficult-to-answer">Затрудняюсь ответить</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="visited-sights">
-            <legend class="visited-sights__legend">Посещенные достопримечательности:</legend>
+          </div>
+          <div class="visited-sights">
+            <div class="visited-sights__legend">Посещенные достопримечательности:</div>
             <ul class="visited-sights__list">
               <li class="visited-sights__item">
                 <input class="visually-hidden visited-sights__input-checkbox visited-sights__bridge" name="visited-sights" type="checkbox" id="visited-sights__bridge-devil" value="visited-sights__bridge-devil" checked>
@@ -120,7 +120,7 @@
                 <label class="visited-sights__label" for="visited-sights__red-rocks">Красные скалы</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
           <div class="emotions">
             <label class="emotions__label" for="emotions__description">Опишите свои эмоции:</label>
             <textarea class="emotions__field emotions__description" name="emotions__description" id="emotions__description" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
