@@ -125,6 +125,10 @@
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @tablet-width) {
+  .videopresentation {
+    width: @tablet-width;
+  }
+
   .videopresentation__title {
     .indents-zero();
     padding-top: 64px;
@@ -140,9 +144,8 @@
   }
 
   .videopresentation__description {
-    padding-left: 170px;
-    padding-right: 170px;
     padding-bottom: 60px;
+    width: @tablet-width - 340px;
     font-size: 14px;
     line-height: 24px;
   }
@@ -220,19 +223,22 @@
 /***********************************************/
 @media (min-width: @desktop-width) {
   .videopresentation {
-    /* Временно для верстки */
-    min-height: 744px;
+    width: @desktop-width;
   }
 
   .videopresentation__title {
     padding-top: 66px;
     padding-bottom: 12px;
-    .padding-for-desktop-text();
+    margin-left: auto;
+    margin-right: auto;
+    width: @desktop-width - 240px;
   }
 
   .videopresentation__description {
-    .padding-for-desktop-text();
     padding-bottom: 58px;
+    margin-left: auto;
+    margin-right: auto;
+    width: @desktop-width - 760px;
   }
 
   .videopresentation__img {
