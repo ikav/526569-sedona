@@ -21,7 +21,6 @@
   margin-left: auto;
   margin-right: auto;
   width: @mobile-width - 40px;
-
   font-size: 14px;
   line-height: 26px;
 }
@@ -31,8 +30,11 @@
 }
 
 .advantages__title {
-  .padding-for-mobile-text(); //на всякий случай. Вдруг заголовок будет длинным
   padding-top: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px; //на всякий случай. Вдруг заголовок будет длинным
+
   font-size: 18px;
   line-height: 26px;
   color: @text-color-title;
@@ -103,7 +105,11 @@
 /* Отступы между строчек. Для первого и второго преимущества разные */
 /* За каскадом, чтобы не зависело от расположения кода */
 .advantages__item--first .advantages__title {
+  .indents-zero();
   padding-top: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
 }
 
 .advantages__item--first .advantages__number {
@@ -116,7 +122,11 @@
 }
 
 .advantages__item--second .advantages__title {
+  .indents-zero();
   padding-top: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
 }
 
 .advantages__item--second .advantages__number {
@@ -160,9 +170,13 @@
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @tablet-width) {
+  .advantages {
+    width: @tablet-width;
+  }
+  
   .advantages__better-grand-canyoun {
     margin-bottom: 50px;
-    .padding-for-tablet-text();
+    width: @tablet-width - 120px;
   }
 
   .advantages__text {
@@ -170,6 +184,13 @@
   }
 
   .advantages__city {
+    width: 512px;
+    height: 256px;
+  }
+
+  .advantages__img-city,
+  .advantages__img-bridge {
+    /* Для IE */
     width: 512px;
     height: 256px;
   }
@@ -186,18 +207,20 @@
   }
 
   .advantages__item--first::before {
-    width: 0;
-    height: 0;
+    display: none;
   }
 
   .advantages__list--third {
     display: flex;
     justify-content: space-between;
-    min-height: 256px; //временно, для черновой верстки
   }
 
-  .advantages__item--fourth .advantages__title::before,
-  .advantages__item--fifth .advantages__title::before {
+  .advantages__list-last-items {
+    padding-bottom: 46px;
+  }
+
+  .advantages__item--fourth::before,
+  .advantages__item--fifth::before {
     display: none;
   }
 
