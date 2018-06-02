@@ -15,7 +15,10 @@
   .indents-zero();
   padding-top: 38px;
   padding-bottom: 30px;
-  .padding-for-mobile-text();
+  margin-left: auto;
+  margin-right: auto;
+  //из-за IE меняем ширину текста через width, а не padding
+  width: @mobile-width - 60px; 
   font-size: 18px;
   line-height: 26px;
 }

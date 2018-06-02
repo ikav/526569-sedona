@@ -13,6 +13,9 @@
 .contacts__title {
   padding-top: 26px;
   padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
   font-size: 21px;
   line-height: 26px;
   color: @text-color-title;
@@ -21,7 +24,8 @@
 /* Для мобильной версии одна надпись, для планшетной и десктопной - другая */
 .contacts__description-mobile,
 .contacts__description {
-  .padding-for-mobile-text();
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 36px;
   font-size: 14px;
   line-height: 24px;
@@ -31,17 +35,19 @@
 /* Только мобильную надпись показываем */
 .contacts__description-mobile {
   display: block;
+  width: @mobile-width - 40px;
 }
 
-/* Плантетная и десктопная надпись не видна */
+/* Планшетная и десктопная надпись не видна */
 .contacts__description {
   display: none;
 }
 
 .contacts__link {
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
   text-decoration: none;
-  width: 280px;
-  margin: 0 auto;
 }
 
 .contacts__link:active .contacts__label {
