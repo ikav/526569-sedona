@@ -1,9 +1,15 @@
+.videopresentation {
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width;
+}
+
 .videopresentation__title {
   position: relative;
   .indents-zero();
-  .padding-for-mobile-text();
   padding-top: 28px;
   padding-bottom: 14px;
+
   font-size: 18px;
   line-height: 26px;
 
@@ -19,8 +25,10 @@
 }
 
 .videopresentation__description {
-  .padding-for-mobile-text();
   padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 60px;
   font-size: 14px;
   line-height: 24px;
 }
