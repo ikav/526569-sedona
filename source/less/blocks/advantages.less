@@ -188,17 +188,17 @@
     height: 256px;
   }
 
+  .advantages__bridge {
+    width: 512px;
+    height: 256px;
+    order: -1;
+  }
+
   .advantages__img-city,
   .advantages__img-bridge {
     /* Для IE */
     width: 512px;
     height: 256px;
-  }
-
-  .advantages__bridge {
-    width: 512px;
-    height: 256px;
-    order: -1;
   }
 
   .advantages__item--first,
@@ -265,9 +265,13 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
+  .advantages {
+    width: @desktop-width;
+  }
+
   .advantages__better-grand-canyoun {
-    padding-left: 350px;
-    padding-right: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .advantages__text {
@@ -283,18 +287,25 @@
     width: 800px;
   }
 
-  .advantages__img-city {
-    margin-top: -70px;
-  }
-
   .advantages__bridge {
     overflow: hidden;
     width: 800px;
     order: -1;
   }
 
+  .advantages__img-city {
+    margin-top: -70px;
+  }
+
   .advantages__img-bridge {
     margin-top: -78px;
+  }
+
+  .advantages__img-city,
+  .advantages__img-bridge {
+    /* Для IE */
+    width: 800px;
+    height: 400px;
   }
 
   .advantages__item .advantages__title {
@@ -317,5 +328,9 @@
 
   .advantages__item .advantages__description {
     padding-top: 22px;
+  }
+
+  .advantages__list-last-items {
+    padding-bottom: 64px;
   }
 }
