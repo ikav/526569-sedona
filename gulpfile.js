@@ -72,11 +72,20 @@ gulp.task("html", function() {
 });
 
 // Минификация JS-кода
-gulp.task("jsmin", function() {
-  gulp.src("source/js/*.js")
+// Пока тупо два раза функцию вызываю
+gulp.task("jsmin1", function() {
+  gulp.src("source/js/script.js")
     .pipe(plumber())
     .pipe(uglify())
     .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("jsmin2", function() {
+  gulp.src("source/js/picturefill.js")
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(rename("picturefill.min.js"))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -89,7 +98,7 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**"
+    "source/js/**/*.js"
   ], {
     base: "source"
   })
@@ -134,7 +143,8 @@ gulp.task("build", function(done){
     "webp",
     "sprite",
     "html",
-    "jsmin",
+    "jsmin1",
+    "jsmin2",
     done
   );
 });
