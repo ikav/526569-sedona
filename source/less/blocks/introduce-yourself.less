@@ -1,4 +1,6 @@
 .introduce-yourself {
+  display: flex;
+  flex-direction: column;
   position: relative;
   .indents-zero();
   margin-bottom: 24px;
@@ -26,7 +28,6 @@
   }
 
   &__legend {
-    position: relative;
     margin-bottom: 22px;    
     font-weight: bold;
     text-align: center;
@@ -108,7 +109,6 @@
 /***********************************************/
 @media (min-width: @desktop-width) {
   .introduce-yourself {
-    /* margin-right: 120px; */
     width: 400px;
 
     &::before {

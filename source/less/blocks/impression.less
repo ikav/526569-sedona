@@ -1,4 +1,6 @@
 .impression {
+  display: flex;
+  flex-direction: column;
   position: relative;
   .indents-zero();
   margin-bottom: 20px;
@@ -26,14 +28,16 @@
 
   &__legend {
     margin: 0 auto;
-    margin-top: 46px; 
     margin-bottom: 38px;     
     font-weight: bold;
     text-align: center;
   }
 
+  &__item {
+    display: flex;
+  }
+
   &__label {
-    display: block;
     position: relative;
     margin-left: 78px;
     margin-bottom: 43px;
@@ -106,7 +110,7 @@
     width: 400px;
     
     &__legend {
-      padding-left: 74px;
+      padding-left: 22px;
       margin-bottom: 75px;
     }
     

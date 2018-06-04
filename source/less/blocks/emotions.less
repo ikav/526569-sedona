@@ -1,4 +1,6 @@
 .emotions {
+  display: flex;
+  flex-direction: column;
   position: relative;
   .indents-zero();
   border: none;
@@ -9,7 +11,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -20px;
+    top: -18px;
     left: -20px;
     width: 320px;
     height: 1px;
@@ -17,9 +19,8 @@
   }
 
   &__label {
-    display: block;
     margin: 0 auto;
-    margin-top: 60px;   
+    margin-top: 2px;   
     font-weight: bold;
     text-align: center;
   }
