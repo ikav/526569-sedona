@@ -1,0 +1,130 @@
+.introduce-yourself {
+  position: relative;
+  .indents-zero();
+  margin-bottom: 24px;
+  border: none;
+  font-size: 18px;
+  line-height: 26px;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .indents-zero();
+    margin-bottom: 20px;
+  }
+
+  &__legend {
+    position: relative;
+    margin-bottom: 22px;    
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  &__field {
+    padding-left: 22px;
+    width: 192px;
+    height: 58px;
+    font-weight: bold;
+    background-color: @bg-field-normal;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  &__first-name {
+    width: 230px;
+  }
+
+/*   &__field::placeholder {
+    padding-top: 0px;
+    padding-left: 22px;
+  } */
+
+  &__field:hover {
+    background-color: @bg-field-hover;
+  }
+
+  &__field:focus {
+    background-color: transparent;
+    border: 2px solid @bg-field-border;
+    outline: none;
+  }
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .introduce-yourself {
+    width: 266px;
+    order: 2;
+
+    &::before {
+      top: 5px;
+      left: -59px;
+      width: 1px;
+      height: 292px;
+    }
+
+    &__legend {
+      margin-bottom: 57px;
+      font-size: 21px;
+      text-align: left;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__field {
+      width: 180px;
+    }
+  
+    &__first-name {
+      width: 216px;
+    }
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .introduce-yourself {
+    /* margin-right: 120px; */
+    width: 400px;
+
+    &::before {
+      left: -79px;
+    }
+
+    &__legend {
+      margin-bottom: 59px;
+    }
+
+    &__field {
+      width: 312px;
+    }
+  
+    &__first-name {
+      width: 350px;
+    }
+  }
+}

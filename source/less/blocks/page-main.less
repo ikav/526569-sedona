@@ -1,6 +1,6 @@
 .page-main {
-  width: @mobile-width;
   margin: 0 auto;
+  width: @mobile-width;
 
   text-transform: uppercase;
   text-align: center;
@@ -15,7 +15,10 @@
   .indents-zero();
   padding-top: 38px;
   padding-bottom: 30px;
-  .padding-for-mobile-text();
+  margin-left: auto;
+  margin-right: auto;
+  //из-за IE меняем ширину текста через width, а не padding
+  width: @mobile-width - 60px; 
   font-size: 18px;
   line-height: 26px;
 }
@@ -33,13 +36,15 @@
   }
 
   .page-main--inner {
+    margin-left: auto;
+    margin-right: auto;
     width: @tablet-width - 120px;
   }
 
   .page-main__title--index {
     padding-top: 47px;
     padding-bottom: 30px;
-    .padding-for-tablet-text();
+    width: @tablet-width - 160px;
     font-size: 21px;
     line-height: 26px;
   }
@@ -48,7 +53,9 @@
     .indents-zero();
     padding-top: 70px;
     padding-bottom: 27px;
-    .padding-for-tablet-text();
+    margin-left: auto;
+    margin-right: auto;
+    width: @tablet-width - 120px;
     font-size: 30px;
     line-height: 35px;
   }
@@ -63,15 +70,17 @@
   }
 
   .page-main__title--index {
-    padding-left: 350px;
-    padding-right: 350px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 21px;
     line-height: 26px;
   }
 
   .page-main__title--inner {
-    .padding-for-desktop-text();
     padding-top: 108px;
+    margin-left: auto;
+    margin-right: auto;
+    width: @desktop-width;
     font-size: 30px;
     line-height: 35px;
   }

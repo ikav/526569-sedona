@@ -1,27 +1,124 @@
 .videopresentation {
-
-  /* Временно для верстки */
-  min-height: 452px;
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width;
 }
 
 .videopresentation__title {
+  position: relative;
   .indents-zero();
-  .padding-for-mobile-text();
   padding-top: 28px;
-  padding-bottom: 12px;
+  padding-bottom: 14px;
+
   font-size: 18px;
   line-height: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  }
 }
 
 .videopresentation__description {
-  padding-left: 21px;
-  padding-right: 21px;
-
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 60px;
   font-size: 14px;
   line-height: 24px;
+}
+
+.videopresentation__img {
+  width: 320px;
+  height: 202px;
+}
+
+.videopresentation__controls {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.videopresentation__scale {
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  top: -44px;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.videopresentation__scale::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 58px;
+  width: 9px;
+  height: 9px;
+  background-color: @background-page;
+  border-radius: 50%;  
+}
+
+.videopresentation__scale::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  width: 236px;
+  height: 4px;
+  background-color: @background-page;
+  opacity: 0.2;
+}
+
+.videopresentation__controls-elements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: -5px;
+  width: 100%;
+  height: 66px;
+  background-color: #f2f2f2;
+}
+
+.videopresentation__button {
+  cursor: pointer;
+}
+
+.videopresentation__replay,
+.videopresentation__subtitles,
+.videopresentation__fullscreen {
+  fill: #000000;
+  opacity: 0.6;
+}
+
+.videopresentation__replay {
+  margin-left: 25px;
+}
+
+.videopresentation__subtitles {
+  margin-left: 133px;
+}
+
+.videopresentation__fullscreen {
+  margin-left: 31px;
+}
+
+.videopresentation__replay:hover,
+.videopresentation__subtitles:hover,
+.videopresentation__fullscreen:hover {
+  opacity: 1;
+}
+
+.videopresentation__replay:active,
+.videopresentation__subtitles:active,
+.videopresentation__fullscreen:active {
+  opacity: 0.3;
 }
 
 /***********************************************/
@@ -29,8 +126,7 @@
 /***********************************************/
 @media (min-width: @tablet-width) {
   .videopresentation {
-    /* Временно для верстки */
-    min-height: 742px;
+    width: @tablet-width;
   }
 
   .videopresentation__title {
@@ -40,14 +136,86 @@
     .padding-for-tablet-text();
     font-size: 30px;
     line-height: 35px;
+
+    /* Убрал разделительную полосу */
+    &::before {
+      display: none;
+    }
   }
 
   .videopresentation__description {
-    .padding-for-tablet-text();
-    padding-bottom: 70px;
+    padding-bottom: 60px;
+    width: @tablet-width - 340px;
     font-size: 14px;
     line-height: 24px;
   }
+
+  .videopresentation__img {
+    width: 648px;
+    height: 500px;
+  }
+
+  .videopresentation__controls {
+    width: 648px;
+  }
+
+  .videopresentation__scale {
+    position: relative;
+    .indents-zero();
+    width: 0;
+    height: 0;
+  }
+  
+  .videopresentation__scale::before {
+    top: 40px;
+    left: 154px;
+  }
+  
+  .videopresentation__scale::after {
+    top: 42px;
+    left: 41px;
+    width: 389px;
+  }
+
+  .videopresentation__controls-elements {
+    margin-top: -98px;
+    height: 94px;
+    background-color: #000000;
+    opacity: 0.6;
+  }
+
+  .videopresentation__replay,
+  .videopresentation__subtitles,
+  .videopresentation__fullscreen {
+    fill: #ffffff;
+    opacity: 1;
+  }
+
+  .videopresentation__replay {
+    margin-left: 36px;
+  }
+  
+  .videopresentation__subtitles {
+    margin-left: 472px;
+  }
+  
+  .videopresentation__fullscreen {
+    margin-left: 32px;
+  }
+
+  .videopresentation__replay:hover,
+  .videopresentation__subtitles:hover,
+  .videopresentation__fullscreen:hover {
+    opacity: 0.6;
+  }
+
+  /* Нужно добавить этот код, иначе active не будет срабатывать (перебъется hover)*/
+  .videopresentation__replay:active,
+  .videopresentation__subtitles:active,
+  .videopresentation__fullscreen:active {
+    opacity: 0.3;
+  }
+
 }
 
 /***********************************************/
@@ -55,18 +223,50 @@
 /***********************************************/
 @media (min-width: @desktop-width) {
   .videopresentation {
-    /* Временно для верстки */
-    min-height: 744px;
+    width: @desktop-width;
   }
 
   .videopresentation__title {
     padding-top: 66px;
     padding-bottom: 12px;
-    .padding-for-desktop-text();
+    margin-left: auto;
+    margin-right: auto;
+    width: @desktop-width - 240px;
   }
 
   .videopresentation__description {
-    .padding-for-desktop-text();
-    padding-bottom: 70px;
+    padding-bottom: 58px;
+    margin-left: auto;
+    margin-right: auto;
+    width: @desktop-width - 760px;
+  }
+
+  .videopresentation__img {
+    width: 800px;
+  }
+
+  .videopresentation__controls {
+    width: 800px;
+  }
+  
+  .videopresentation__scale::before {
+    left: 155px;
+  }
+
+  .videopresentation__scale::after {
+    left: 42px;
+    width: 540px;
+  }
+
+  .videopresentation__replay {
+    margin-left: 34px;
+  }
+  
+  .videopresentation__subtitles {
+    margin-left: 624px;
+  }
+  
+  .videopresentation__fullscreen {
+    margin-left: 32px;
   }
 }

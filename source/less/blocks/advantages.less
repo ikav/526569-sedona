@@ -2,6 +2,9 @@
 .advantages {
   text-transform: uppercase;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width;
 }
 
 .advantages__list,
@@ -15,8 +18,9 @@
 
 .advantages__better-grand-canyoun {
   margin-bottom: 28px;
-  .padding-for-mobile-text();
-
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
   font-size: 14px;
   line-height: 26px;
 }
@@ -26,8 +30,11 @@
 }
 
 .advantages__title {
-  .padding-for-mobile-text(); //на всякий случай. Вдруг заголовок будет длинным
   padding-top: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px; //на всякий случай. Вдруг заголовок будет длинным
+
   font-size: 18px;
   line-height: 26px;
   color: @text-color-title;
@@ -98,7 +105,11 @@
 /* Отступы между строчек. Для первого и второго преимущества разные */
 /* За каскадом, чтобы не зависело от расположения кода */
 .advantages__item--first .advantages__title {
+  .indents-zero();
   padding-top: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
 }
 
 .advantages__item--first .advantages__number {
@@ -111,7 +122,11 @@
 }
 
 .advantages__item--second .advantages__title {
+  .indents-zero();
   padding-top: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
 }
 
 .advantages__item--second .advantages__number {
@@ -121,6 +136,22 @@
 
 .advantages__item--second .advantages__description {
   padding-bottom: 40px;
+}
+
+.advantages__item--fourth,
+.advantages__item--fifth {
+  position: relative;
+}
+
+.advantages__item--fourth::before,
+.advantages__item--fifth::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 20px;
+  width: 280px;
+  height: 1px;
+  background-color: @line-color;
 }
 
 .advantages__city {
@@ -139,9 +170,13 @@
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @tablet-width) {
+  .advantages {
+    width: @tablet-width;
+  }
+  
   .advantages__better-grand-canyoun {
     margin-bottom: 50px;
-    .padding-for-tablet-text();
+    width: @tablet-width - 120px;
   }
 
   .advantages__text {
@@ -159,20 +194,34 @@
     order: -1;
   }
 
+  .advantages__img-city,
+  .advantages__img-bridge {
+    /* Для IE */
+    width: 512px;
+    height: 256px;
+  }
+
   .advantages__item--first,
   .advantages__item--second {
     display: flex;
   }
 
   .advantages__item--first::before {
-    width: 0;
-    height: 0;
+    display: none;
   }
 
   .advantages__list--third {
     display: flex;
     justify-content: space-between;
-    min-height: 256px; //временно, для черновой верстки
+  }
+
+  .advantages__list-last-items {
+    padding-bottom: 46px;
+  }
+
+  .advantages__item--fourth::before,
+  .advantages__item--fifth::before {
+    display: none;
   }
 
   .advantages__item--first .advantages__title,
@@ -216,9 +265,13 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
+  .advantages {
+    width: @desktop-width;
+  }
+
   .advantages__better-grand-canyoun {
-    padding-left: 350px;
-    padding-right: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .advantages__text {
@@ -234,18 +287,25 @@
     width: 800px;
   }
 
-  .advantages__img-city {
-    margin-top: -70px;
-  }
-
   .advantages__bridge {
     overflow: hidden;
     width: 800px;
     order: -1;
   }
 
+  .advantages__img-city {
+    margin-top: -70px;
+  }
+
   .advantages__img-bridge {
     margin-top: -78px;
+  }
+
+  .advantages__img-city,
+  .advantages__img-bridge {
+    /* Для IE */
+    width: 800px;
+    height: 400px;
   }
 
   .advantages__item .advantages__title {
@@ -268,5 +328,9 @@
 
   .advantages__item .advantages__description {
     padding-top: 22px;
+  }
+
+  .advantages__list-last-items {
+    padding-bottom: 64px;
   }
 }

@@ -1,0 +1,157 @@
+.visited-sights {
+  position: relative;
+  .indents-zero();
+  margin-bottom: 5px;
+  border: none;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: @line-color;
+  }
+
+  &__list {
+    .indents-zero();
+    text-transform: none;
+    list-style: none;
+  }
+
+  &__legend {
+    margin: 0 auto;
+    margin-top: 63px; 
+    margin-bottom: 32px;     
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    margin-left: 80px;
+    margin-bottom: 54px;
+  }
+
+  &__label::before {
+    content: "";
+
+    position: absolute;
+    top: -15px;
+    left: -78px;
+    width: 56px;
+    height: 56px;
+    background-color: @bg-field-normal;
+  }
+
+  &__input-checkbox:checked + &__label::after {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: -61px;
+    width: 24px;
+    height: 18px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__label:hover::before {
+    background-color: @bg-field-hover;
+  }
+
+  &__input-checkbox:checked + &__label:active::after {
+    opacity: 0.3;
+  }
+}
+
+/***********************************************/
+/*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @tablet-width) {
+  .visited-sights {
+    width: 100%;
+    order: 4;
+
+    &::before {
+      top: 32px;
+      left: 0;
+      width: 126px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 32px;
+      right: 0;
+      width: 126px;
+      height: 1px;
+      background-color: @line-color;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 96px;
+    }
+
+    &__item {
+      min-width: 260px;
+      margin-bottom: 8px;
+    }
+
+    &__legend {
+      margin-top: 6px;
+      margin-bottom: 58px;
+      padding-left: 142px;
+      padding-right: 140px;
+      font-size: 21px;
+    }
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  .visited-sights {
+    width: @desktop-width - 240px;
+    margin: 0 auto;
+
+    &::before {
+      top: 45px;
+      left: 0px;
+      width: 280px;
+    }
+
+    &::after {
+      top: 45px;
+      right: 0px;
+      width: 280px;
+    }
+
+    &__legend {
+      margin-top: 18px;
+      margin-bottom: 58px;
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+
+    &__list {
+      justify-content: space-between;
+      .indents-zero();
+    }
+
+    &__item {
+      .indents-zero();
+      min-width: 0; 
+    }
+  }
+}

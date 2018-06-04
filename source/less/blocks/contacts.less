@@ -5,52 +5,75 @@
 }
 
 .contacts__title,
-.contacts__description {
+.contacts__description,
+.contacts__description-mobile {
   .indents-zero();
 }
 
 .contacts__title {
   padding-top: 26px;
   padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
   font-size: 21px;
   line-height: 26px;
   color: @text-color-title;
 }
 
+/* Для мобильной версии одна надпись, для планшетной и десктопной - другая */
+.contacts__description-mobile,
 .contacts__description {
-  .padding-for-mobile-text();
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 36px;
   font-size: 14px;
   line-height: 24px;
   color: @text-color-description;
 }
 
+/* Только мобильную надпись показываем */
+.contacts__description-mobile {
+  display: block;
+  width: @mobile-width - 40px;
+}
+
+/* Планшетная и десктопная надпись не видна */
+.contacts__description {
+  display: none;
+}
+
 .contacts__link {
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
   text-decoration: none;
-  width: 280px;
-  margin: 0 auto;
+}
+
+.contacts__link:active .contacts__label {
+  opacity: 0.3;
 }
 
 /***********************************************/
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
-@media (min-width: @tablet-width) {
-  .contacts {
-
-    /* Убрать. Временные обводки. */
-    min-height: 666px;
-  }
-
+@media (min-width: @tablet-width) {  
   .contacts__title {
-    padding-top: 52px;
-    padding-bottom: 26px;
+    padding-top: 50px;
+    padding-bottom: 28px;
+    width: @tablet-width;
     font-size: 30px;
     line-height: 35px;
   }
 
+  .contacts__description-mobile {
+    display: none;
+  }
+
   .contacts__description {
+    display: block;
     .padding-for-tablet-text();
-    padding-bottom: 44px;
+    padding-bottom: 42px;
   }
 
   .contacts__link {
@@ -63,9 +86,13 @@
 /***********************************************/
 @media (min-width: @desktop-width) {
   .contacts {
+    margin-left: auto;
+    margin-right: auto;
+    width: @desktop-width;
+  }
 
-    /* Убрать. Временные обводки. */
-    min-height: 678px;
+  .contacts__title {
+    padding-top: 50px;
   }
 
   .contacts__description {

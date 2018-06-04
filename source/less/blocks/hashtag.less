@@ -4,7 +4,6 @@
 }
 
 .hashtag {
-  margin-top: 35px;
   margin-bottom: 38px;
   text-transform: uppercase;
 }
@@ -23,5 +22,29 @@
 @media (min-width: @tablet-width) {
   .hashtag {
     .indents-zero();
+  }
+
+  .hashtag__link--index {
+    margin-left: 2px;
+    margin-right: -8px;
+  }
+
+  .hashtag__link--photo {
+    margin-right: -8px;
+  }
+
+  .hashtag__link--form {
+    margin-right: -7px;
+  }
+}
+
+/***********************************************/
+/*             ДЕСКТОПНАЯ ВЕРСИЯ               */
+/***********************************************/
+@media (min-width: @desktop-width) {
+  /* сброс отступов слева и права. Они не нужны в десктопе */
+  .hashtag__link--index {
+    margin-left: 0;
+    margin-right: -7px;
   }
 }

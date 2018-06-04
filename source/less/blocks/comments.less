@@ -1,20 +1,21 @@
 .comments {
-  /* Убрать. Временные обводки. */
-  min-height: 1863px;
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width - 40px;
 }
 
 .comments__title {
   .indents-zero();
   padding-top: 37px;
   padding-bottom: 12px;
-  .padding-for-mobile-text();
+  width: @mobile-width - 40px;
   font-size: 18px;
   line-height: 26px;
 }
 
 .comments__description {
+  margin-bottom: 37px;
+  width: @mobile-width - 40px;
   font-size: 14px;
   line-height: 24px;
 }
@@ -24,23 +25,27 @@
 /***********************************************/
 @media (min-width: @tablet-width) {
   .comments {
-    /* Временно для верстки. */
-    min-height: 1650px;
+    width: @tablet-width - 120px;
   }
 
   .comments__title {
     .indents-zero();
-    padding-top: 70px;
+    padding-top: 72px;
     padding-bottom: 12px;
-    .padding-for-tablet-text();
+    width: @tablet-width - 120px;
     font-size: 30px;
     line-height: 35px;
+    text-align: center;
   }
 
   .comments__description {
-    .padding-for-tablet-text();
+    margin-bottom: 0;    
+    margin-left: auto;
+    margin-right: auto;
+    width: @tablet-width - 330px;
     font-size: 14px;
     line-height: 24px;
+    text-align: center;
   }
 }
 
@@ -49,16 +54,17 @@
 /***********************************************/
 @media (min-width: @desktop-width) {
   .comments {
-    /* Временно для верстки. */
-    min-height: 1490px;
-  }
+    width: @desktop-width - 240px;
 
-  .comments__title {
-    padding-top: 107px;
-    .padding-for-desktop-text();
-  }
+    &__title {
+      padding-top: 108px;
+      padding-bottom: 14px;
+      width: @desktop-width - 240px;
+    }
 
-  .comments__description {
-    .padding-for-desktop-text();
+    &__description {
+      padding-bottom: 0px;
+      width: @desktop-width - 760px;
+    }
   }
 }
