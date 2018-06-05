@@ -1,4 +1,6 @@
 .visited-sights {
+  display: flex;
+  flex-direction: column;
   position: relative;
   .indents-zero();
   margin-bottom: 5px;
@@ -26,14 +28,16 @@
 
   &__legend {
     margin: 0 auto;
-    margin-top: 63px; 
     margin-bottom: 32px;     
     font-weight: bold;
     text-align: center;
   }
 
+  &__item {
+    display: flex;
+  }
+
   &__label {
-    display: block;
     position: relative;
     margin-left: 80px;
     margin-bottom: 54px;

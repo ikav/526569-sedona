@@ -4,13 +4,25 @@
 .figure__capture,
 .figure__title,
 .figure__like-link,
-.figure__likes-number {
+.figure__likes-number,
+.figure__text {
   .indents-zero();
 }
 
 .figure {
   padding-top: 18px;
   padding-bottom: 22px;
+}
+
+.figure__capture {
+  display: flex;
+  flex-direction: column;
+  padding-top: 11px;
+  text-align: left;
+}
+
+.figure__text {
+  width: 280px;
 }
 
 .figure__title {
@@ -28,7 +40,6 @@
 }
 
 .figure__like-link {
-  position: relative;
   text-decoration: none; //уберем подчеркивание
 }
 
@@ -36,16 +47,14 @@
   fill: @line-color;
 }
 
+.figure__likes {
+  display: flex;
+}
+
 .figure__likes-number {
-  position: absolute;
   margin-left: 15px;
   font-size: 14px;
   line-height: 24px;
-}
-
-.figure__capture {
-  padding-top: 11px;
-  text-align: left;
 }
 
 /***********************************************/
@@ -70,49 +79,37 @@
   }
 
   .figure__capture {
-    position: relative;
+    flex-direction: row;
+    align-items: center;
     padding-top: 0;
-    margin-top: -4px; //Это какой-то хак. Плохо :(   
+    margin-top: -4px;   
     background-color: @background-add;
+  }
+
+  .figure__text {
+    width: 200px;
+    margin-left: 21px;
   }
 
   .figure__title {
     padding-top: 15px;
-    padding-left: 21px;   
   }
 
   .figure__author {
     .indents-zero();
     padding-bottom: 16px;
-    padding-left: 20px;
+  }
+
+  .figure__likes {
+    margin-left: 19px;
+  }
+
+  .figure__likes--first {
+    margin-left: 343px;
   }
 
   .figure__likes-number {
-    position: absolute;
-    .indents-zero();
-    top: 28px;
-    left: 272px;
-  }
-
-  .figure__like-link {
-    position: absolute;
-    .indents-zero();
-    top: 28px;
-    left: 240px;
-  }
-
-  .figure__likes--first .figure__likes-number {
-    position: absolute;
-    .indents-zero();
-    top: 28px;
-    left: 595px;
-  }
-
-  .figure__likes--first .figure__like-link {
-    position: absolute;
-    .indents-zero();
-    top: 28px;
-    left: 565px;
+    margin-left: 10px;
   }
 }
 
@@ -142,30 +139,23 @@
     margin-top: -84px;
   }
 
+  .figure__text {
+    width: 270px;
+  }
+
   .figure__title {
     padding-top: 16px;
-    padding-left: 21px;
   }
 
+  .figure__likes {
+    margin-left: 25px;
+  }
+
+  .figure__likes--first {
+    margin-left: 825px;
+  }
+  
   .figure__like-icon {
     fill: @text-color-link;
-  }
-
-  .figure__likes-number {
-    left: 348px;
-  }
-
-  .figure__like-link {
-    left: 316px;
-  }
-
-
-  .figure__likes--first .figure__likes-number {
-    left: 1148px;
-  }
-
-  /* Временно. С графикой нужно будет передалать*/
-  .figure__likes--first .figure__like-link {
-    left: 1116px;
   }
 }
