@@ -10,6 +10,15 @@
   display: block;
   width: 46px;
   height: 47px;
+
+  &:hover,
+  &:active {
+    background-color: @background-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social__item {
@@ -29,13 +38,4 @@
 .social__link-icon-youtube {
   margin: 17px auto;
   fill: #ffffff;
-}
-
-.social__link:hover,
-.social__link:active {
-  background-color: @background-hover;
-}
-
-.social__link:active {
-  opacity: 0.3;
 }

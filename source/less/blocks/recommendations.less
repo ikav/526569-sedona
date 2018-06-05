@@ -61,34 +61,36 @@
   font-size: 14px;
   line-height: 21px;
   color: @text-color-description;
+
+  &--food {
+    padding-bottom: 39px;
+  }
+  
+  /* Оставляем мобильный блок */
+  &--souvenirs-mobile {
+    display: block;
+  }
+  
+  /* Скрываем блок с неразрывными пробелами*/
+  &--souvenirs {
+    display: none;
+  }
 }
 
-.recommendations__title--housing {
-  padding-top: 36px;
-  padding-bottom: 14px;
-}
+.recommendations__title {
+  &--housing {
+    padding-top: 36px;
+    padding-bottom: 14px;
+  }
 
-.recommendations__title--souvenirs {
-  padding-top: 28px;
-  padding-bottom: 15px;
-}
+  &--souvenirs {
+    padding-top: 28px;
+    padding-bottom: 15px;
+  }
 
-.recommendations__title--food {
-  padding-top: 28px;
-}
-
-.recommendations__description--food {
-  padding-bottom: 39px;
-}
-
-/* Оставляем мобильный блок */
-.recommendations__description--souvenirs-mobile {
-  display: block;
-}
-
-/* Скрываем блок с неразрывными пробелами*/
-.recommendations__description--souvenirs {
-  display: none;
+  &--food {
+    padding-top: 28px;
+  }
 }
 
 /***********************************************/
@@ -105,18 +107,18 @@
   .recommendations__item {
     .indents-zero();
     width: 165px;
-  }
 
-  .recommendations__item--housing {
-    order: 1;
-  }
+    &--housing {
+      order: 1;
+    }
 
-  .recommendations__item--food {
-    order: 2;
-  }
+    &--food {
+      order: 2;
+    }
 
-  .recommendations__item--souvenirs {
-    order: 3;
+    &--souvenirs {
+      order: 3;
+    }
   }
 
   /* Изменяем размеры изображения и позиционирования */
@@ -158,16 +160,16 @@
     padding-bottom: 61px;
     font-size: 14px;
     line-height: 21px;
-  }
 
-  /* Скрываем мобильный блок */
-  .recommendations__description--souvenirs-mobile {
-    display: none;
-  }
+    /* Скрываем мобильный блок */
+    &--souvenirs-mobile {
+      display: none;
+    }
 
-  /* Оставляем блок с неразрывными пробелами*/
-  .recommendations__description--souvenirs {
-    display: block;
+    /* Оставляем блок с неразрывными пробелами*/
+    &--souvenirs {
+      display: block;
+    }
   }
 }
 
@@ -177,18 +179,18 @@
 @media (min-width: @desktop-width) {
   .recommendations__item {
     width: 294px;
-  }
 
-  .recommendations__item--housing {
-    order: 1;
-  }
+    &--housing {
+      order: 1;
+    }
 
-  .recommendations__item--food {
-    order: 2;
-  }
+    &--food {
+      order: 2;
+    }
 
-  .recommendations__item--souvenirs {
-    order: 3;
+    &--souvenirs {
+      order: 3;
+    }
   }
 
   /* Изменяем позиционирование */
@@ -213,9 +215,9 @@
   .recommendations__description {
     padding-top: 24px;
     padding-bottom: 82px;
-  }
 
-  .recommendations__description--souvenirs {
-    width: 220px;
+    &--souvenirs {
+      width: 220px;
+    }
   }
 }

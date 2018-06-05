@@ -5,10 +5,10 @@
   text-transform: uppercase;
   text-align: center;
   background-color: @background-page;
-}
 
-.page-main--inner {
-  width: @mobile-width - 40px;
+  &--inner {
+    width: @mobile-width - 40px;
+  }
 }
 
 .page-main__title {
@@ -21,10 +21,10 @@
   width: @mobile-width - 60px; 
   font-size: 18px;
   line-height: 26px;
-}
 
-.page-main__title--inner {
-  padding-bottom: 26px;
+  &--inner {
+    padding-bottom: 26px;
+  }
 }
 
 /***********************************************/
@@ -33,31 +33,33 @@
 @media (min-width: @tablet-width) {
   .page-main {
     width: @tablet-width;
+
+    &--inner {
+      margin-left: auto;
+      margin-right: auto;
+      width: @tablet-width - 120px;
+    }
   }
 
-  .page-main--inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: @tablet-width - 120px;
-  }
+  .page-main__title {
+    &--index {
+      padding-top: 47px;
+      padding-bottom: 30px;
+      width: @tablet-width - 160px;
+      font-size: 21px;
+      line-height: 26px;
+    }
 
-  .page-main__title--index {
-    padding-top: 47px;
-    padding-bottom: 30px;
-    width: @tablet-width - 160px;
-    font-size: 21px;
-    line-height: 26px;
-  }
-
-  .page-main__title--inner {
-    .indents-zero();
-    padding-top: 70px;
-    padding-bottom: 27px;
-    margin-left: auto;
-    margin-right: auto;
-    width: @tablet-width - 120px;
-    font-size: 30px;
-    line-height: 35px;
+    &--inner {
+      .indents-zero();
+      padding-top: 70px;
+      padding-bottom: 27px;
+      margin-left: auto;
+      margin-right: auto;
+      width: @tablet-width - 120px;
+      font-size: 30px;
+      line-height: 35px;
+    }
   }
 }
 
@@ -69,19 +71,21 @@
     width: @desktop-width;
   }
 
-  .page-main__title--index {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 21px;
-    line-height: 26px;
-  }
+  .page-main__title {
+    &--index {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 21px;
+      line-height: 26px;
+    }
 
-  .page-main__title--inner {
-    padding-top: 108px;
-    margin-left: auto;
-    margin-right: auto;
-    width: @desktop-width;
-    font-size: 30px;
-    line-height: 35px;
+    &--inner {
+      padding-top: 108px;
+      margin-left: auto;
+      margin-right: auto;
+      width: @desktop-width;
+      font-size: 30px;
+      line-height: 35px;
+    }
   }
 }
