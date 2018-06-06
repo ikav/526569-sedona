@@ -19,33 +19,32 @@
     height: 1px;
     background-color: @line-color;
   }
+}
 
-  &__list {
-    .indents-zero();
-    text-transform: none;
-    list-style: none;
-  }
+.impression__list {
+  .indents-zero();
+  text-transform: none;
+  list-style: none;
+}
 
-  &__legend {
-    margin: 0 auto;
-    margin-bottom: 38px;     
-    font-weight: bold;
-    text-align: center;
-  }
+.impression__legend {
+  margin: 0 auto;
+  margin-bottom: 38px;     
+  font-weight: bold;
+  text-align: center;
+}
 
-  &__item {
-    display: flex;
-  }
+.impression__item {
+  display: flex;
+}
 
-  &__label {
-    position: relative;
-    margin-left: 78px;
-    margin-bottom: 43px;
-  }
+.impression__label {
+  position: relative;
+  margin-left: 78px;
+  margin-bottom: 43px;
 
-  &__label::before {
+  &::before {
     content: "";
-
     position: absolute;
     top: -15px;
     left: -78px;
@@ -54,26 +53,28 @@
     background-color: @bg-field-normal;
     border-radius: 50%
   }
+}
 
-  &__input-radio:checked + &__label::after {
-    content: "";
 
-    position: absolute;
-    top: 2px;
-    left: -61px;
-    width: 22px;
-    height: 22px;
-    background-color: #333333;
-    border-radius: 50%
-  }
 
-  &__label:hover::before {
-    background-color: @bg-field-hover;
-  }
+.impression__input-radio:checked + .impression__label::after {
+  content: "";
 
-  &__input-radio:checked + &__label:active::after {
-    opacity: 0.3;
-  }
+  position: absolute;
+  top: 2px;
+  left: -61px;
+  width: 22px;
+  height: 22px;
+  background-color: #333333;
+  border-radius: 50%
+}
+
+.impression__label:hover::before {
+  background-color: @bg-field-hover;
+}
+
+.impression__input-radio:checked + .impression__label:active::after {
+  opacity: 0.3;
 }
 
 /***********************************************/
@@ -86,18 +87,18 @@
     &::before {
       display: none;
     }
+  }
 
-    &__legend {
-      margin-top: 0;
-      margin-bottom: 74px;
-      font-size: 21px;
-      text-align: left;
-    }
+  .impression__legend {
+    margin-top: 0;
+    margin-bottom: 74px;
+    font-size: 21px;
+    text-align: left;
+  }
 
-    &__label {
-      margin-left: 76px;
-      margin-bottom: 52px;
-    }
+  .impression__label {
+    margin-left: 76px;
+    margin-bottom: 52px;
   }
 }
 
@@ -108,12 +109,10 @@
   .impression {
     margin-left: 6px;
     width: 400px;
-    
-    &__legend {
-      padding-left: 22px;
-      margin-bottom: 75px;
-    }
-    
-  }
+  }    
 
+  .impression__legend {
+    padding-left: 22px;
+    margin-bottom: 75px;
+  }
 }

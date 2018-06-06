@@ -1,18 +1,17 @@
 .page-footer {
   width: @mobile-width;
   margin: 0 auto;
-
   text-transform: uppercase;
   text-align: center;
   background-color: @background-page;
-}
 
-.page-footer--index {
-  padding-top: 35px;
-}
+  &--index {
+    padding-top: 35px;
+  }
 
-.page-footer--inner {
-  padding-top: 73px;
+  &--inner {
+    padding-top: 73px;
+  }
 }
 
 .page-footer__wrapper {
@@ -29,32 +28,32 @@
   .page-footer {
     width: @tablet-width;
     margin: 0 auto;
+
+    &--photo {
+      /* Страница фотогалереи имеет отступы по 60px */
+      width: @tablet-width - 120px;
+      padding-top: 74px;
+      padding-left: 0;
+    }
+  
+    &--form {
+      padding-top: 96px;
+    }
   }
 
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-around;
     padding-bottom: 36px;
-  }
 
-  .page-footer__wrapper--index {
-    padding-top: 2px;
-  }
+    &--index {
+      padding-top: 2px;
+    }
 
-  .page-footer--photo {
-    /* Страница фотогалереи имеет отступы по 60px */
-    width: @tablet-width - 120px;
-    padding-top: 74px;
-    padding-left: 0;
-  }
-
-  .page-footer__wrapper--photo {
-    /* Страница фотогалереи надписи прижаты к краям */
-    justify-content: space-between;
-  }
-
-  .page-footer--form {
-    padding-top: 96px;
+    &--photo {
+      /* Страница фотогалереи надписи прижаты к краям */
+      justify-content: space-between;
+    }
   }
 }
 
@@ -64,6 +63,18 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     width: @desktop-width;
+
+    &--index {
+      padding-top: 34px;
+    }
+
+    &--photo {
+      padding-top: 118px;
+    }
+
+    &--form {
+      padding-top: 100px;
+    }
   }
 
   .page-footer__wrapper {
@@ -82,17 +93,5 @@
   .page-footer__copyright {
     margin-top: 2px;
     margin-left: 275px;
-  }
-
-  .page-footer--index {
-    padding-top: 34px;
-  }
-
-  .page-footer--photo {
-    padding-top: 118px;
-  }
-
-  .page-footer--form {
-    padding-top: 100px;
   }
 }

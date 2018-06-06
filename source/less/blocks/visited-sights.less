@@ -19,33 +19,32 @@
     height: 1px;
     background-color: @line-color;
   }
+}
 
-  &__list {
-    .indents-zero();
-    text-transform: none;
-    list-style: none;
-  }
+.visited-sights__list {
+  .indents-zero();
+  text-transform: none;
+  list-style: none;
+}
 
-  &__legend {
-    margin: 0 auto;
-    margin-bottom: 32px;     
-    font-weight: bold;
-    text-align: center;
-  }
+.visited-sights__legend {
+  margin: 0 auto;
+  margin-bottom: 32px;     
+  font-weight: bold;
+  text-align: center;
+}
 
-  &__item {
-    display: flex;
-  }
+.visited-sights__item {
+  display: flex;
+}
 
-  &__label {
-    position: relative;
-    margin-left: 80px;
-    margin-bottom: 54px;
-  }
+.visited-sights__label {
+  position: relative;
+  margin-left: 80px;
+  margin-bottom: 54px;
 
-  &__label::before {
+  &::before {
     content: "";
-
     position: absolute;
     top: -15px;
     left: -78px;
@@ -53,26 +52,26 @@
     height: 56px;
     background-color: @bg-field-normal;
   }
+}
 
-  &__input-checkbox:checked + &__label::after {
-    content: "";
+.visited-sights__input-checkbox:checked + .visited-sights__label::after {
+  content: "";
 
-    position: absolute;
-    top: 6px;
-    left: -61px;
-    width: 24px;
-    height: 18px;
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-  }
+  position: absolute;
+  top: 6px;
+  left: -61px;
+  width: 24px;
+  height: 18px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
 
-  &__label:hover::before {
-    background-color: @bg-field-hover;
-  }
+.visited-sights__label:hover::before {
+  background-color: @bg-field-hover;
+}
 
-  &__input-checkbox:checked + &__label:active::after {
-    opacity: 0.3;
-  }
+.visited-sights__input-checkbox:checked + .visited-sights__label:active::after {
+  opacity: 0.3;
 }
 
 /***********************************************/
@@ -99,25 +98,24 @@
       height: 1px;
       background-color: @line-color;
     }
+  }
+  .visited-sights__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 96px;
+  }
 
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: 96px;
-    }
+  .visited-sights__item {
+    min-width: 260px;
+    margin-bottom: 8px;
+  }
 
-    &__item {
-      min-width: 260px;
-      margin-bottom: 8px;
-    }
-
-    &__legend {
-      margin-top: 6px;
-      margin-bottom: 58px;
-      padding-left: 142px;
-      padding-right: 140px;
-      font-size: 21px;
-    }
+  .visited-sights__legend {
+    margin-top: 6px;
+    margin-bottom: 58px;
+    padding-left: 142px;
+    padding-right: 140px;
+    font-size: 21px;
   }
 }
 
@@ -140,22 +138,21 @@
       right: 0px;
       width: 280px;
     }
+  }
+  .visited-sights__legend {
+    margin-top: 18px;
+    margin-bottom: 58px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
 
-    &__legend {
-      margin-top: 18px;
-      margin-bottom: 58px;
-      padding-left: 300px;
-      padding-right: 300px;
-    }
+  .visited-sights__list {
+    justify-content: space-between;
+    .indents-zero();
+  }
 
-    &__list {
-      justify-content: space-between;
-      .indents-zero();
-    }
-
-    &__item {
-      .indents-zero();
-      min-width: 0; 
-    }
+  .visited-sights__item {
+    .indents-zero();
+    min-width: 0; 
   }
 }
