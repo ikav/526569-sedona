@@ -49,6 +49,7 @@
     "node": "8.11"
   },
   "dependencies": {
+    "eclint": "^2.7.0",
     "npm": "^5.8.0"
   }
 }
