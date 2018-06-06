@@ -48,6 +48,9 @@
   }
 
   &:focus {
+    /* чтобы не дергались значения в полях при установке фокуса уменьшим на ширину border */
+    padding-top: 14px;
+    padding-left: 18px;
     background-color: transparent;
     border: 2px solid @bg-field-border;
     outline: none;

@@ -48,11 +48,18 @@
   border: none;
   box-sizing: border-box;
 
+/*   &::placeholder {
+    padding-top: 0px;
+    padding-left: 22px;
+  }
+ */
+
   &:hover {
     background-color: @bg-field-hover;
   }
 
   &:focus {
+    padding-left: 20px; //чтобы не дергались значения в полях при установке фокуса уменьшим на ширину border
     background-color: transparent;
     border: 2px solid @bg-field-border;
     outline: none;
@@ -62,11 +69,6 @@
 .introduce-yourself__first-name {
   width: 230px;
 }
-
-/*   &__field::placeholder {
-  padding-top: 0px;
-  padding-left: 22px;
-} */
 
 /***********************************************/
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
