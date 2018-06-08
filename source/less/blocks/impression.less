@@ -29,7 +29,7 @@
 
 .impression__legend {
   margin: 0 auto;
-  margin-bottom: 38px;     
+  margin-bottom: 38px;
   font-weight: bold;
   text-align: center;
 }
@@ -51,11 +51,16 @@
     width: 56px;
     height: 56px;
     background-color: @bg-field-normal;
-    border-radius: 50%
+    border-radius: 50%;
   }
 }
 
-
+.impression__input-radio:hover + .impression__label, .impression__input-radio:focus + .impression__label {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: @bg-field-border;
+  outline-offset: 6px;
+}
 
 .impression__input-radio:checked + .impression__label::after {
   content: "";
@@ -66,7 +71,7 @@
   width: 22px;
   height: 22px;
   background-color: #333333;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .impression__label:hover::before {
@@ -83,7 +88,7 @@
 @media (min-width: @tablet-width) {
   .impression {
     order: 1;
-  
+
     &::before {
       display: none;
     }
@@ -109,7 +114,7 @@
   .impression {
     margin-left: 6px;
     width: 400px;
-  }    
+  }
 
   .impression__legend {
     padding-left: 22px;

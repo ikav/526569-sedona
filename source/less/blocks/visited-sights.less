@@ -29,7 +29,7 @@
 
 .visited-sights__legend {
   margin: 0 auto;
-  margin-bottom: 32px;     
+  margin-bottom: 32px;
   font-weight: bold;
   text-align: center;
 }
@@ -52,6 +52,13 @@
     height: 56px;
     background-color: @bg-field-normal;
   }
+}
+
+.visited-sights__input-checkbox:hover + .visited-sights__label, .visited-sights__input-checkbox:focus + .visited-sights__label {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: @bg-field-border;
+  outline-offset: 6px;
 }
 
 .visited-sights__input-checkbox:checked + .visited-sights__label::after {
@@ -99,6 +106,7 @@
       background-color: @line-color;
     }
   }
+
   .visited-sights__list {
     display: flex;
     flex-wrap: wrap;
@@ -129,16 +137,17 @@
 
     &::before {
       top: 45px;
-      left: 0px;
+      left: 0;
       width: 280px;
     }
 
     &::after {
       top: 45px;
-      right: 0px;
+      right: 0;
       width: 280px;
     }
   }
+
   .visited-sights__legend {
     margin-top: 18px;
     margin-bottom: 58px;
@@ -153,6 +162,6 @@
 
   .visited-sights__item {
     .indents-zero();
-    min-width: 0; 
+    min-width: 0;
   }
 }

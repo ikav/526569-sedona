@@ -21,8 +21,6 @@
   color: @text-color-title;
 }
 
-/* Для мобильной версии одна надпись, для планшетной и десктопной - другая */
-.contacts__description-mobile,
 .contacts__description {
   margin-left: auto;
   margin-right: auto;
@@ -32,14 +30,13 @@
   color: @text-color-description;
 }
 
-/* Только мобильную надпись показываем */
-.contacts__description-mobile {
+.contacts__description {
   display: block;
   width: @mobile-width - 40px;
 }
 
-/* Планшетная и десктопная надпись не видна */
-.contacts__description {
+/* Для мобильного варианта нет перехода на новую строку */
+.contacts__description-new-line {
   display: none;
 }
 
@@ -57,7 +54,7 @@
 /***********************************************/
 /*             ПЛАНШЕТНАЯ ВЕРСИЯ               */
 /***********************************************/
-@media (min-width: @tablet-width) {  
+@media (min-width: @tablet-width) {
   .contacts__title {
     padding-top: 50px;
     padding-bottom: 28px;
@@ -66,14 +63,13 @@
     line-height: 35px;
   }
 
-  .contacts__description-mobile {
-    display: none;
+  .contacts__description {
+    padding-bottom: 42px;
+    width: @tablet-width;
   }
 
-  .contacts__description {
+  .contacts__description-new-line {
     display: block;
-    .padding-for-tablet-text();
-    padding-bottom: 42px;
   }
 
   .contacts__link {
@@ -96,7 +92,7 @@
   }
 
   .contacts__description {
-    .padding-for-desktop-text();
+    width: @desktop-width;
     padding-bottom: 47px;
   }
 }

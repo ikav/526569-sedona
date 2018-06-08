@@ -21,7 +21,7 @@
 
 .emotions__label {
   margin: 0 auto;
-  margin-top: 2px;   
+  margin-top: 2px;
   font-weight: bold;
   text-align: center;
 }
@@ -48,6 +48,9 @@
   }
 
   &:focus {
+    /* чтобы не дергались значения в полях при установке фокуса уменьшим на ширину border */
+    padding-top: 14px;
+    padding-left: 18px;
     background-color: transparent;
     border: 2px solid @bg-field-border;
     outline: none;
@@ -98,13 +101,13 @@
 
     &::before {
       top: 38px;
-      left: 0px;
+      left: 0;
       width: 280px;
     }
 
     &::after {
       top: 38px;
-      right: 0px;
+      right: 0;
       width: 280px;
     }
   }

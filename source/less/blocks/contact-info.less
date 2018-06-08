@@ -22,7 +22,7 @@
 
 .contact-info__legend {
   margin: 0 auto;
-  margin-bottom: 20px;     
+  margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
 }
@@ -36,7 +36,7 @@
     content: "";
     position: absolute;
     top: 34px;
-    right: 0px;
+    right: 0;
     width: 58px;
     height: 58px;
     background-color: @bg-field-border;
@@ -75,7 +75,7 @@
 }
 
 /*   &__field::placeholder {
-    padding-top: 0px;
+    padding-top: 0;
     padding-left: 22px;
   } */
 
@@ -95,6 +95,7 @@
   }
 
   &:focus {
+    padding-left: 20px; //чтобы не дергались значения в полях при установке фокуса уменьшим на ширину border
     background-color: transparent;
     border: 2px solid @bg-field-border;
     outline: none;
@@ -107,7 +108,7 @@
   .contact-info {
     width: 100%;
     order: 3;
-  
+
     &::before {
       top: 27px;
       left: 0;
@@ -165,7 +166,7 @@
   }
 
   .contact-info__field {
-    margin-bottom: 0; 
+    margin-bottom: 0;
     width: 316px;
   }
 
@@ -181,11 +182,11 @@
   .contact-info__wrapper {
     flex-direction: row;
     align-items: center;
-    .indents-zero(); 
+    .indents-zero();
 
     &::before {
-      top: 0px;
-      right: 0px;
+      top: 0;
+      right: 0;
     }
   }
 
@@ -195,7 +196,7 @@
     &::after {
       top: 20px;
     }
-  } 
+  }
 
   .contact-info__wrapper-email {
     width: 480px;
@@ -208,7 +209,7 @@
   .contact-info__wrapper-main {
     display: flex;
     justify-content: space-between;
-    width: @desktop-width - 240px;      
+    width: @desktop-width - 240px;
     margin: 0 auto;
   }
 }
