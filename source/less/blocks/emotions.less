@@ -26,11 +26,6 @@
   text-align: center;
 }
 
-/*   &__field::placeholder {
-  padding-top: 16px;
-  padding-left: 20px;
-} */
-
 .emotions__field {
   line-height: 26px;
   padding-top: 16px;
@@ -42,6 +37,10 @@
   background-color: @bg-field-normal;
   border: none;
   box-sizing: border-box;
+  resize: none;
+  /* можно только по одной оси разрешить тянуться
+  resize: vertical;
+  */
 
   &:hover {
     background-color: @bg-field-hover;

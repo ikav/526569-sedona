@@ -9,5 +9,4 @@ node_modules/
 build/
 npm-debug.*
 source/css/*.css
-source/less/normalize.less
 Thumbs.db
