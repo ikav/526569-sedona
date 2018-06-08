@@ -35,11 +35,6 @@
   width: @mobile-width - 40px;
 }
 
-/* Для мобильного варианта нет перехода на новую строку */
-.contacts__description-new-line {
-  display: none;
-}
-
 .contacts__link {
   margin-left: auto;
   margin-right: auto;
@@ -68,6 +63,7 @@
     width: @tablet-width;
   }
 
+  /* Для планшета и десктопа переход на новую строку */
   .contacts__description-new-line {
     display: block;
   }
