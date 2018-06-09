@@ -79,16 +79,6 @@
   &--food {
     padding-bottom: 39px;
   }
-
-  /* Оставляем мобильный блок */
-  &--souvenirs-mobile {
-    display: block;
-  }
-
-  /* Скрываем блок с неразрывными пробелами*/
-  &--souvenirs {
-    display: none;
-  }
 }
 
 /***********************************************/
@@ -158,16 +148,6 @@
     padding-bottom: 61px;
     font-size: 14px;
     line-height: 21px;
-
-    /* Скрываем мобильный блок */
-    &--souvenirs-mobile {
-      display: none;
-    }
-
-    /* Оставляем блок с неразрывными пробелами*/
-    &--souvenirs {
-      display: block;
-    }
   }
 }
 
@@ -213,9 +193,10 @@
   .recommendations__description {
     padding-top: 24px;
     padding-bottom: 82px;
+  }
 
-    &--souvenirs {
-      width: 220px;
-    }
+  /* Переносим текст на новую строку */
+  .recommendations__description-new-line {
+    display: block;
   }
 }

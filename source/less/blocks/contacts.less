@@ -22,22 +22,14 @@
 }
 
 .contacts__description {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 36px;
+  width: @mobile-width - 40px;
   font-size: 14px;
   line-height: 24px;
   color: @text-color-description;
-}
-
-.contacts__description {
-  display: block;
-  width: @mobile-width - 40px;
-}
-
-/* Для мобильного варианта нет перехода на новую строку */
-.contacts__description-new-line {
-  display: none;
 }
 
 .contacts__link {
@@ -68,6 +60,7 @@
     width: @tablet-width;
   }
 
+  /* Для планшета и десктопа переход на новую строку */
   .contacts__description-new-line {
     display: block;
   }
