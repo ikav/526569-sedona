@@ -118,6 +118,10 @@
 /*             ДЕСКТОПНАЯ ВЕРСИЯ               */
 /***********************************************/
 @media (min-width: @desktop-width) {
+  .figure--other {
+    margin-top: -5px;
+  }
+
   .figure__img {
     width: 400px;
     height: 268px;
@@ -136,8 +140,9 @@
   }
 
   .figure__capture {
+    position: absolute;
+    bottom: 5px;
     background-color: transparent;
-    margin-top: -84px;
   }
 
   .figure__text {
