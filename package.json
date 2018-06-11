@@ -27,7 +27,7 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint --ignore-path=\"source/less/normalize.less\" \"source/less/**/*.less\" --syntax less ",
+    "stylelint": "stylelint  \"source/less/*/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "npm run build && gulp serve"
