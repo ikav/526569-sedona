@@ -55,14 +55,6 @@
   }
 }
 
-.impression__input-radio:hover + .impression__label,
-.impression__input-radio:focus + .impression__label {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: @bg-field-border;
-  outline-offset: 6px;
-}
-
 .impression__input-radio:checked + .impression__label::after {
   content: "";
 
@@ -81,6 +73,11 @@
 
 .impression__input-radio:checked + .impression__label:active::after {
   opacity: 0.3;
+}
+
+.impression__input-radio:active + .impression__label::before,
+.impression__input-radio:focus + .impression__label::before {
+  background-color: @bg-radio-check-down;
 }
 
 /***********************************************/

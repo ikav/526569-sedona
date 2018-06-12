@@ -51,16 +51,21 @@
     width: 56px;
     height: 56px;
     background-color: @bg-field-normal;
+    border-radius: 5px;
   }
 }
 
-.visited-sights__input-checkbox:hover + .visited-sights__label,
-.visited-sights__input-checkbox:focus + .visited-sights__label {
+.visited-sights__input-checkbox:active + .visited-sights__label::before,
+.visited-sights__input-checkbox:focus + .visited-sights__label::before {
+  background-color: #d5d5d5;
+}
+
+/* Если потребуется сделать outline */
+/* .visited-sights__input-checkbox:focus + .visited-sights__label::before {
   outline-width: 2px;
   outline-style: solid;
-  outline-color: @bg-field-border;
-  outline-offset: 6px;
-}
+  outline-color: #9ac2db;
+} */
 
 .visited-sights__input-checkbox:checked + .visited-sights__label::after {
   content: "";
